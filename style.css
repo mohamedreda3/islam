@@ -7,6 +7,54 @@ scroll-behavior: smooth;
 font-family: Mothanna;
 }
 
+.loading{
+position: fixed;
+z-index: 9999999999999999;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+flex-direction:column;
+text-align:center;
+padding: 0px 10px;
+top:0px;
+left:0px;
+}
+
+.loading img{
+width:200px;
+height: 200px;
+margin: 50px 0px;
+animation: rotate 3s infinite ;
+border: none;
+}
+    
+.loading p{
+font-weight: 900;
+font-size: 20px;
+color: white;
+text-align:center;
+font-family: mohamed;
+line-height: 2;
+}
+    
+@keyframes rotate{
+0%{
+transform: rotate(0deg);
+}
+25%{
+transform: rotate(20deg);
+}  
+75%{
+transform: rotate(-20deg);
+}
+100%{
+transform: rotate(0deg);
+}
+}
+
 
 ::selection{
 background-color: #4bc0c8;
