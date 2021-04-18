@@ -1,3 +1,6 @@
+setTimeout(()=>{document.querySelector('.loading').style.display = "none";},5000)
+
+
 var aya_ar = document.querySelector('.ayaran') ,
 aya_en = document.querySelector('.ayaranen'); 
 
