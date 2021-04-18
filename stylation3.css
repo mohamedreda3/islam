@@ -1,0 +1,619 @@
+@font-face {font-family: Besmellah;  src: url(110_Besmellah.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: Almarai;  src: url(fonts/Almarai-Bold.ttf);}
+@font-face {font-family: change;  src: url(fonts/Changa-Medium.ttf);}
+@font-face {font-family: lateef;  src: url(fonts/Lateef-Regular.ttf);}
+@font-face {font-family: made;  src: url(fonts/Mada-Medium.ttf);}
+@font-face {font-family: MarkaziText;  src: url(fonts/MarkaziText-Medium.ttf);}
+@font-face {font-family: mohamed;  src: url(islamic.ttf);}
+/********************************************************************************/
+
+
+*{
+box-sizing: border-box;
+font-family: kufam; 
+border-color: white;
+}
+
+/*****************Body,Html****************/
+body,html{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+padding: 0px;
+margin: 0px;
+overflow-x: hidden;
+background-color: #514537;
+}
+
+body{
+display:flex;
+flex-direction: column;
+}
+
+.loading{
+position: fixed;
+z-index: 9999999;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #2a0109;
+flex-direction:column;
+text-align:center;
+padding: 0px 10px;
+}
+
+.loading img{
+width:200px;
+height: 200px;
+margin: 50px 0px;
+animation: rotate 3s infinite ;
+border: none;
+}
+
+.loading p{
+font-weight: 900;
+font-size: 20px;
+color: white;
+text-align:center;
+font-family: mohamed;
+line-height: 2;
+}
+
+@keyframes rotate{
+0%{
+transform: rotate(0deg);
+}
+25%{
+transform: rotate(20deg);
+}
+
+75%{
+transform: rotate(-20deg);
+}
+100%{
+transform: rotate(0deg);
+}
+}
+
+/*****************Body,Html****************/
+
+/****************commom*******************/
+.navv,.nav,nav,.sele,.rand,.container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.clear{
+width: 100%;
+height: 10vh;
+margin-bottom: 17px;
+z-index: -1;
+}
+
+.logo a,.toggle a{
+text-decoration: none;
+}
+
+.selector p , .selector select{
+width: 100%;
+direction: rtl;
+text-align: center;  
+}
+
+.selector select ,.selector select option{
+padding: 5px 18px;
+cursor: pointer;
+border-radius: 10px;
+outline: none;
+}
+    
+    
+/****************commom*******************/
+
+
+/*****************Nav****************/
+.navv,.sele,.rand,.container{
+width: 100%;
+padding: 8px 0px;
+}
+
+.nav{
+position: relative;
+top: 13px;
+width: 97%;
+min-height: 7vh;
+} 
+
+.logo {
+width: 70px;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.logo img{
+width: 100%;
+}
+
+nav{
+position: relative;
+width: 100%;
+min-height: 7vh;
+justify-content: space-around;
+border: 1px solid white;
+border-radius: 4px;
+align-items: center;
+box-shadow: 1px 2px 5px 2px grey;
+
+}
+
+.logo{
+padding: 5px;
+font-size: 20px;
+margin: 0px;
+}
+
+.list{
+font-size: xx-large;
+cursor: pointer;
+color: white;
+}
+
+.tog{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: min-content;
+position: absolute;
+top: 51.3px;
+transition: 1s;
+transform: translateX(-98%);
+z-index: 99999;
+}
+
+.tog:hover{
+transform: translateX(0%);
+z-index: 99999;
+}
+
+.toggle{
+padding: 15px;
+width: 100%;
+background-color: #3f010d;
+box-shadow: 1px 2px 5px 2px grey;
+border-radius: 5px;
+display: flex;
+list-style: none;
+flex-direction: column;
+height: min-content;
+justify-content: center;
+align-items: center;
+z-index: 9999999999;
+position: absolute;
+top: 0px;
+/* transform: translateY(-100%); */
+transition: 1s;
+}
+
+.toggle a{
+margin-left: 5px;
+margin-bottom: 9px;
+width: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+padding-top: 10px;
+}
+
+.toggle a li{
+padding: 5px 18px;
+color: white;
+}
+
+.toggle a:hover{
+font-weight: 900;
+box-shadow: 3px 3px 5px 1px grey;
+margin-bottom: 15px;
+}
+
+.toggle li{
+text-align: center;
+}
+
+.tog.active{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: min-content;
+position: absolute;
+top: 51.3px;
+transition: 1s;
+transform: translateX(0%);
+z-index: 99999;
+background-color: #dabb69;
+}
+
+
+/*****************Nav****************/
+
+/***************Select**************/
+.selector{
+width: 95%;
+display: flex;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+border: 1px solid;
+padding: 10px;
+position: relative;
+border-radius: 5px;
+box-shadow: 1px 2px 5px 2px grey;
+background-color: #dabb69;
+}
+
+.selector select{
+box-shadow: 1px 2px 5px 2px grey;
+}
+
+.selector p{
+padding: 0px;
+margin: 0px;
+}
+
+
+/*appearance: menulist;
+box-sizing: border-box;
+align-items: center;
+white-space: pre;
+-webkit-rtl-ordering: logical;*/
+/***************Select**************/
+
+
+/***************Random-Box**************/
+.rand{
+padding: 0px 0px;
+text-align: center;
+}
+
+.random{
+width: 96%;
+height: 250px;
+border: 1px solid white;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 0px 10px;
+font-weight: 900;
+overflow-y: scroll;
+direction: rtl;
+box-shadow: 1px 2px 5px 2px grey;
+font-size:14px;
+text-align: center;
+padding: 10px;
+}
+
+.random p{
+padding: 0px;
+margin: 0px;
+text-align: center;
+width: 100%;
+color: white;
+}
+
+/***************Random-Box**************/
+
+.container{
+margin-bottom: 30px;
+flex-direction: column;
+}
+
+.sec-container{
+width: 96%;
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+.hadithcont{
+width: 50%;
+height: 490px;
+border: 1px solid white;
+border-radius: 5px;
+padding-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+position: relative;
+color:white;
+}
+
+.hadithcont input{
+height: 30px;
+padding: 10px;
+border-radius: 50px;
+width: 90%;
+outline: none;
+direction: rtl;
+border: 0px;
+}
+
+.hadithcont input:hover{
+box-shadow: 2px 10px 30px 30px white;
+transition: 0.5s ease-in;
+}
+
+/*.hadithcont svg{
+position: absolute;
+left: 2px;
+transform: translate(48px,7px);
+}*/
+
+.contahadith{
+width: 100%;
+margin-top: 50px;
+height: 100%;
+overflow-y: scroll;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+}
+
+.contahadith .ht-hb{
+padding: 10px;
+width: 90%;
+overflow: visible;
+direction: rtl;
+border: 1px solid white;
+margin-bottom: 10px;
+line-height: 2;
+font-weight: 900;
+border-radius: 4px;
+box-shadow: 1px 2px 5px 2px grey;
+}
+
+.contahadith .ht-hb p{
+width: 100%;
+}
+
+.contahadith .ht-hb .hbottom{
+text-align: left;
+}
+
+.rightside,.leftside{
+width: 214px;
+height: 470px;
+}
+
+
+.leftside{
+margin-right: 5px;
+}
+
+.rightside{
+margin-left: 5px;
+margin-bottom: 15px;
+}
+
+.rightsidetop,.leftsidetop{
+margin-bottom: 10px;
+width:214px ;
+height: 240px;
+border: 1px solid white;
+border-radius: 5px;
+direction: rtl;
+padding: 10px;
+box-shadow: 2px 2px 5px 2px grey;
+background-color: #cfab6f;
+} 
+
+
+/*.ht-hb{
+display:none;
+}*/
+
+.rightsidetop p,.leftsidetop p{
+margin-bottom: 3px;
+padding: 2px;
+width: 100%;
+border-bottom: 2px solid white ;
+border-bottom-style: dotted;
+/*box-shadow: 1px 2px 5px 2px grey;*/
+margin-top:0px
+}
+
+.rbottom h1,.leftsidetop h1{
+width: 100%;
+padding: 2px;
+margin-bottom: 5px;
+margin-top: 0px;
+font-size: 13px;
+box-shadow: 1px 2px 5px 2px grey;
+border-radius: 5px;
+padding: 3px ;
+text-align: center;
+}
+    
+.rightsidetop:nth-child(1){
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+ 
+.rbottom{
+padding:6px;
+}
+
+.resource{
+width: 97%;
+background-color: #3f010d;
+text-align: center;
+box-shadow: 2px 2px 5px 2px grey;
+border-radius: 5px;
+padding: 15px 0px;
+margin-top: 40px ;
+color: white;
+font-weight: 900;
+}
+
+.resource a{
+text-decoration-color: white ;
+color: white;
+font-weight: 900;
+
+}
+
+.hadithcont svg.darek {
+color: white;
+}
+.rbottom p,.ltop p{
+padding: 4px;
+}
+
+.lbottom p{
+padding: 10px;
+}
+
+/**************************Toggle-Button***************************/
+/* The switch - the box around the slider */
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+  
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+}
+  
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: .4s;
+}
+  
+input:checked + .leftsidetop {
+background-color: #2196F3;
+}
+  
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+   
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+    
+.slider.round:before {
+border-radius: 50%;
+}
+
+input:checked + .slider {
+background-color: #2196F3;
+}
+
+/**************************Toggle-Button***************************/
+
+/***************************Dark-Mode******************************/
+body.dark,.nav.dark,.sele.dark,.selector.dark,.navv.dark,.rand.dark,.random.dark,.container.dark,.toggle.dark,.resource.dark,.resource a.dark,.rtop.dark,.rbottom.dark,.ltop.dark,.lbottom.dark{
+background-color: #292929;
+color: white;
+}
+
+.rtop.dark p,.rbottom.dark p,.ltop.dark p,.lbottom.dark p{
+border-bottom: 2px solid white ;
+border-bottom-style: dotted;
+}
+
+.toggle a li.dark{
+color: white;
+}
+
+.hadithcont svg.darek {
+color: black;
+}
+
+.logo a.darrk{
+color: white;
+} 
+
+.resource a.dark{
+text-decoration-color: white;
+}
+/***************************Dark-Mode******************************/
+
+/***************************Medias******************************/
+@media (max-width:1200px){
+}
+
+
+@media (max-width:792px){
+.sec-container{
+flex-direction: column-reverse;
+align-items: center;
+}
+
+.hadithcont{
+width: 100%;
+margin: 12px 0px;
+}
+
+.rightside{
+margin-left: 0px;
+}
+
+.leftside{
+margin-right: 0px;
+}
+
+}
+
+@media(max-width:500px){
+.random{
+font-size: 12px;
+}
+}
+
+
+
+/***************************Medias******************************/

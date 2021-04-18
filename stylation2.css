@@ -1,0 +1,679 @@
+/****************************************************Fonts***************************************************************/
+
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: Almarai;  src: url(fonts/Almarai-Bold.ttf);}
+@font-face {font-family: change;  src: url(fonts/Changa-Medium.ttf);}
+@font-face {font-family: lateef;  src: url(fonts/Lateef-Regular.ttf);}
+@font-face {font-family: made;  src: url(fonts/Mada-Medium.ttf);}
+@font-face {font-family: MarkaziText;  src: url(fonts/MarkaziText-Medium.ttf);}
+
+
+/************************************************************************************************************************
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
+
+/****************************************************Fonts***************************************************************/
+*{
+box-sizing: border-box;
+font-family: Almarai;
+font-weight: bolder;
+color: white;
+}
+
+body,html,.f-des{
+width: 100%;
+display: flex;
+overflow-x: hidden;
+}
+
+body,html{
+min-height: min-content;
+margin: 0px;
+justify-content: flex-start;
+flex-direction: column;
+align-items: center;
+background-color: #363030;
+}
+
+.container,.f-des{
+padding:10px;
+width: 100%;
+display: flex;
+overflow-x: hidden;
+}
+
+.container{
+align-items: center;
+flex-direction: column;
+/*margin: 100px 0px;*/
+}
+
+
+.loading{
+position: fixed;
+z-index: 9999999;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #2a0109;
+flex-direction:column;
+text-align:center;
+padding: 0px 10px;
+top:0px;
+left:0px;
+}
+
+.loading img{
+width:200px;
+height: 200px;
+margin: 50px 0px;
+animation: rotate 3s infinite ;
+border: none;
+}
+    
+.loading p{
+font-weight: 900;
+font-size: 20px;
+color: white;
+text-align:center;
+font-family: mohamed;
+line-height: 2;
+}
+    
+@keyframes rotate{
+0%{
+transform: rotate(0deg);
+}
+25%{
+transform: rotate(20deg);
+}  
+75%{
+transform: rotate(-20deg);
+}
+100%{
+transform: rotate(0deg);
+}
+}
+
+
+
+
+
+/************************Search*************************/
+.search{
+width: 80%;
+width: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px 0px;
+flex-direction: column;
+position: relative;
+}
+
+.searchzekrname{
+width: 100%;
+padding: 15px;
+border-radius: 10px;
+font-size: 12px;
+direction: rtl;
+outline: none;
+}
+
+.search svg{
+/*transform: translate(-160px, 0px);*/
+color: black;
+padding: 7px;
+font-size: 31px;
+position: absolute;
+left: 0px;
+}
+ 
+.search svg path{
+fill: black;
+}
+
+#empty{
+/*transform: translate(-159px, 0px);*/
+padding-left: 0px;
+padding-right: 0px;
+margin-left: 20px;
+cursor: pointer;
+}
+
+/************************Search*************************/
+
+
+
+
+
+
+
+
+.f-des,.f-azker{
+min-height: 200px;
+border: 1px solid;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-bottom: 20px;
+}
+
+.f-des{
+margin-bottom: 0px;
+}
+
+.f-hov{
+width: 200px;
+height: 200px;
+border: 1px solid;
+padding: 15px;
+position: relative;
+text-align: center;
+}
+
+.f-txt{
+width: 100%;
+height: 100%;
+text-align: center;
+border-top-width: 0%;
+position: relative;
+}
+
+.f-txt p{
+width: 100%;
+height: 100%;
+margin: 0px;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+
+.f-txt p span{
+width: 100%;
+height: 100%;
+padding: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+}
+
+.azkar{
+width: 100%;
+border: 1px solid;
+word-break: break-all;
+}
+
+.f-des{
+background: url('2.jpg');
+}
+
+.f-hov{
+background: url('1.jpg');
+}
+
+.f-txt{
+cursor: pointer;
+}
+
+.f-des,.f-hov,.f-txt{
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+/*--------------------Before-After-------------------*/
+
+.f-txt::before{
+content: '';
+width: 0%;
+height: 0%;
+position: absolute;
+top: 0px;
+left: 0px;
+transition: 1s ease-in;
+}
+
+.f-txt::after{
+content: '';
+width: 0%;
+height: 0%;
+position: absolute;
+top: 0px;
+right: 0px;
+transition: 1s ease-in;
+}
+
+.f-txt p::before{
+content: '';
+width: 0%;
+height: 0%;
+position: absolute;
+bottom: 0px;
+right: 0px;
+transition: 1s ease-in;
+}
+
+.f-txt p::after{
+content: '';
+width: 0%;
+height: 100%;
+position: absolute;
+bottom: 0px;
+left: 0px;
+transition: 1s ease-in;
+}
+
+/*--------------------Before-After-------------------*/
+
+
+/*-------------------------Hovers--------------------*/
+
+.f-hov:hover .f-txt{
+transition: 1s all;
+}
+
+.f-hov:hover .f-txt::before{
+animation: wide 0.5s ease-in;
+animation-fill-mode: forwards;
+}
+
+.f-hov:hover .f-txt::after{
+animation: high 0.5s 0.5s;
+animation-fill-mode: forwards;
+}
+
+.f-hov:hover .f-txt p::before{
+animation: wide2 0.3s 0.8s;
+animation-fill-mode: forwards;
+}
+
+.f-hov:hover .f-txt p::after{
+animation: high2 0.5s 1s;
+animation-fill-mode: forwards;
+}
+
+.f-hov:hover .f-txt p span{
+animation: reveal 2s ;
+animation-fill-mode: forwards;
+}
+
+.f-txt p span{
+width: 100%;
+}
+/*-------------------------Hovers--------------------*/
+
+
+/*-------------------animations---------------------*/
+
+@keyframes wide{
+from{
+border: 0px solid;
+width: 0%;
+}to{
+border: 1px solid;
+width: 100%;
+}
+}
+
+@keyframes high{
+from{
+border: 0px solid;
+height: 0%;
+}to{
+border: 1px solid;
+height: 100%;
+}
+}
+
+@keyframes wide2{
+from{
+border: 0px solid;
+width: 0%;
+}to{
+border: 1px solid;
+width: 100%;
+}
+}
+
+@keyframes high2{
+from{
+border: 0px solid;
+height: 0%;
+}to{
+border: 1px solid;
+height: 100%;
+}
+}
+
+@keyframes reveal{
+from{
+opacity: 0;
+background: none;
+}to{
+opacity: 1;
+background:  url('3.jpg'),rgba(0, 0, 0, 0.568);
+background-repeat: no-repeat;
+background-position: center;
+background-color: rgba(0, 0, 0, 0.568);
+background-size: cover;
+font-weight: 900;
+font-size: 100%;
+color: white;
+}
+}
+
+/*-------------------animations---------------------*/
+.s-num{
+width: 60%;
+padding: 11px 14px;
+margin: 30px auto;
+cursor: pointer;
+/*outline: none;*/
+border: none;
+background-color: bisque;
+color: brown;
+}
+
+.sur-num{
+width: 90%;
+min-height: min-content;
+border: 1px solid;
+padding: 10px;
+direction: rtl;
+}
+/*****************************************************/
+
+.f-azker,.rand-zekr{
+padding:10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: column;
+direction: rtl;
+}
+
+.f-azker{
+background-color: #3e3838;
+box-shadow: 1px 2px 5px 2px grey;
+border: none;
+}
+
+.rand-zekr{
+height: 150px;
+border-bottom: 0.5px solid grey;
+padding-bottom: 30px;
+width: 100%;
+display: flex;
+font-size: 16px;
+justify-content: center;
+align-items: center;
+background: brown;
+margin-top: 120px;
+margin-bottom: 30px;
+box-shadow: 1px 2px 5px 2px grey;
+}
+
+.f-f-azker{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.showzekr{
+width:150px;
+height: 46px;
+padding: 0px 0px;
+margin-bottom: 15px;
+font-size: 11px;
+margin-top: 15px;
+cursor: pointer;
+margin-left: 30px;
+margin-right: 30px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+outline: none;
+border: none;
+border-radius: 5px;
+background-color: darkgreen;
+color: white;
+font-weight: 500;
+box-shadow: 0.2px 0.3px 10px 1px black ;
+}
+
+.showzekr:nth-of-type(odd):active{
+transform: scale(1.2) rotate(10deg);
+}
+
+.showzekr:nth-of-type(even):active{
+transform: scale(1.2) rotate(-10deg);
+}
+
+.showzekr:hover,.count:hover{
+color: white;
+background-color: darkcyan;
+font-size: 13px;
+transition: 0.4s all;
+transform: translateY(-8px);
+}
+
+.count:hover{
+font-size: larger;
+}
+
+.title{
+padding: 5px 35px;
+box-shadow: 0.2px 0.3px 10px 1px black;
+background: none;
+cursor: pointer;
+font-family: change;
+}
+
+.title:hover{
+transform: scale(1.2);
+}
+
+.s-azker{
+position: absolute;
+transform : translatey(100%);
+background-color: #363030;
+width: 90%;
+display: flex;
+direction: rtl;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid;
+display: none;
+transition: 1s ease-in;
+border-radius: 5px;
+}
+
+.s-azker .close{
+margin: 0px;
+border: 1px solid;
+padding: 10px;
+border-radius: 50%;
+margin-top: 5px;
+line-height: 10.5px;
+text-align: center;
+cursor: pointer;
+font-family:  kufam,sans-serif;
+background-color: #363030;
+position: absolute;
+top: -53px;
+right: -3px;
+border-bottom: 0px;
+transition: 0.5s ease-in;
+}
+
+.s-azker::before{
+content: '';
+width: 20px ;
+position: absolute;
+top: -11.6px;
+right: 3px;
+height: 20px;
+background-color: aliceblue;
+transform: rotate(45deg);
+background-color:#363030;
+border: 1px solid;
+border-bottom: 0px;
+border-right: 0px;
+z-index: 888;
+border-bottom-right-radius: 5px;
+}
+ 
+
+.close:hover {
+background-color: red;
+font-weight: 900;
+}
+
+/*.s-azker::before{
+content:"\f00d";
+width: 50px;
+height: 50px;
+color: white;
+}*/
+
+.s-s-azker{
+width:100%;
+} 
+
+.zekry{
+padding: 10px; 
+width: 100%;
+display: flex;
+direction: rtl;
+flex-direction: row;
+min-height: 100px;
+justify-content: flex-start;
+line-height: 1.5;
+margin-bottom: 20px;
+border-bottom: 1px solid gray;
+color: white;
+}
+
+.zekry:last-child{border:none;}
+
+.ghost{
+width: 100%;
+display: flex;
+direction: rtl;
+flex-direction: column;
+justify-content: space-between;
+word-spacing: 1.5;
+}
+
+.count{
+height: 100%;
+margin-left: 10px;
+width: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #15bc184a;
+cursor: pointer;
+}
+
+.reference,.description{
+width: 100%;
+text-align: center;
+background-color: bisque;
+padding: 5px;
+margin-top: 9px;
+color: black;
+
+}
+
+.description{
+margin-top: 0px;
+margin-bottom: 9px;
+}
+ 
+.name,.rand-zekr{
+word-spacing: 0.49rem;
+line-height: 2.2;
+}
+
+.zekrname{
+width: 100%;
+border-bottom: 0.5px solid grey;
+text-align: center;
+background: brown;
+border-radius: 10px;
+padding: 15px;
+transform: translateY(10px);
+transition: 0.5s ease-in;
+}
+
+.zekrname:hover{
+cursor: pointer;
+box-shadow: 1px 1px 5px 2px aliceblue;
+}
+
+.rand-zekr{
+border-bottom: 0.5px solid grey;
+padding-bottom: 30px;
+margin-top: 120px;
+margin-bottom: 30px;
+}
+
+
+
+
+/*****************************media**********************************/
+@media(min-width:2500px){
+.container{
+margin-top: 300px;
+}
+
+}
+
+
+@media(max-width:550px){
+    
+.name,.rand-zekr{
+word-spacing: 0.29rem;
+}
+
+body{
+padding: 0;
+}
+
+.ghost{
+word-spacing: 1;
+}
+
+.reference,.description,.name,.rand-zekr{
+font-size: 16px;
+}
+
+.zekrname{
+font-size: medium;
+padding: 5px 0px;
+}  
+
+.rand-zekr{
+font-size: xx-small;
+padding: 5px;
+}
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="stylation2.css">
+<title>الأذكار</title>
+</head>
+<body>
+
+<!---------------------Loading-Page-------------------------->
+<div class="loading">
+<p> لا تنسى أبدا ذكر الله </p>
+<img src="i2.jpg">
+<p> سبحان الله وبحمده سبحان الله العظيم </p>
+</div>
+<!---------------------Loading-Page-------------------------->
+
+
+<!-------------------------------Nav------------------------------------>
+<div class="navv">
+    <div class="nav">
+    <nav> 
+    <div class="tog">
+    <ul class="toggle">
+    <a href="index.html"><li>  الرئيسيه  </li></a>
+    <a href="ayaat.html"><li>  آيات القرآن الكريم   </li></a>
+    <a href="hadith.html"><li>  الأحاديث  </li></a>
+    <a href="quranlive.html"><li>  القرآن الكريم بث مباشر  </li></a>
+    </ul>
+    </div>
+<i class="fas fa-list list" onclick="togle()"></i>
+<h1 class="logo"><a href="#"> الأذكار </a></h1>
+    </nav>
+    </div>
+    </div>
+    <!--<div class="clear"></div>-->
+    <!-------------------------------Nav------------------------------------>
+
+
+
+<div class="container">
+<!-------------------------------------------------------------First------------------------------------------------------------------>
+
+<div class="rand-zekr">    
+</div>
+
+<!-------------------------------------------------------------First------------------------------------------------------------------>
+
+
+
+<!-------------------------------------------------------------Search------------------------------------------------------------------>
+<div class="search">
+<input onkeyup="filter()" style="color:black" type="text" id="searchzekrname" class="searchzekrname" placeholder="أبحث بأسم الذكر">
+<i class="fas fa-search"></i>
+<i class="fas fa-backspace" id="empty" onclick="makeempty()"></i>
+</div>
+<!-------------------------------------------------------------Search------------------------------------------------------------------>
+
+
+<!-------------------------------------------------------------Second------------------------------------------------------------------>
+<div class="f-azker">
+<h1 class="title">الأذكار</h1><br>
+<div class="f-f-azker">
+</div>
+</div>
+<!-------------------------------------------------------------Second------------------------------------------------------------------>
+
+
+
+
+<!-------------------------------------------------------------Third------------------------------------------------------------------>
+<div class="s-azker">
+<p class="close">X</p>
+<h1 class="zekrname"><h1>
+<div class="s-s-azker"></div>
+</div>
+<!-------------------------------------------------------------Third------------------------------------------------------------------>
+</div>
+
+
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="all.js"></script>
+<script src="quran.js"></script>
+</html>

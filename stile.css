@@ -1,0 +1,157 @@
+/*@media (max-width:1000px){
+h1.dinna{
+font-size: 0.1vh;
+}
+}*/
+
+@media(max-width:820px){
+.arkan{
+justify-content: flex-start;
+overflow: hidden;
+overflow-x: scroll;
+}
+    
+.arkan-container h1{
+justify-content: end;
+}
+}
+
+    
+@media(max-width:686px){
+
+em#remove{
+text-align: right;  
+}
+
+.pic:nth-of-type(odd) {
+    bottom: 0vh;
+}
+
+.ran-ar, .ran-en {
+    width: 100%;
+}
+
+em#remove-rawy{
+text-align: left;  
+}
+
+.random{
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.ran-ar{
+margin-bottom: 3vh;
+}
+
+
+.banner-img{
+display: none;
+}
+    
+.banner-appointment {
+width: 48vh;
+bottom: -23px;
+right: -10px;
+height: 87.76vh;
+}
+    
+.banner-text{
+width: 100%;
+height: 10.76vh;
+position: absolute;
+left: 0px;
+bottom: -20.9vh;
+padding: 10vh 0px;
+border-radius: 5px;
+box-shadow: none;
+}
+
+.dinna,.arrowdown{
+color:black;
+}
+
+
+.banner{
+justify-content: space-evenly;
+}
+    
+.taaref-Islam {
+margin: 50vh 0px 0px 0px;
+}
+
+    
+.banner-takweem {
+width: 100%;
+bottom: -36.343vh;
+right: 0px;
+border: 0;
+border-bottom: 0.3vh solid #cccdee;
+}
+
+.selects select{
+width:100%;
+height:4.75vh;
+border: 0.3px solid;
+font-size:0.8vw;
+}
+
+.mwaqeet{
+font-size:0.8vw;
+}
+}
+
+@media(max-width:480px){
+.banner{
+flex-direction: column-reverse;
+justify-content: space-around;
+}
+
+.banner-text{
+bottom: -23.2vh;
+}
+
+.dinna,.arrowdown,.arkan a span , .arkan-container h1,.mwaqeet,.takweem,.arkan a:nth-child(1) span {
+font-size: 3.8vw;
+}   
+ 
+.mwaqeet{
+font-size:0.5vw;
+}
+
+.banner-appointment{
+right: 0px;
+bottom: -24px;
+}
+
+
+.banner-text {
+width: 100%;
+height: 10.76vh;
+/* left: -46px; */
+}
+}
+
+@media (max-width:354px){
+.banner-appointment{
+width: 100%;
+}
+}
+        
+
+@media (max-width:298px){
+h1.dinna,.arkan{
+font-size: 1px;
+}
+
+}
+
+@media(max-width:195px){
+*{
+    width:100%
+}
+}
+
+
+

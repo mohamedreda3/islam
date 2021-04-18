@@ -1,0 +1,1239 @@
+@font-face {font-family: Mothanna;  src: url(Mothanna.ttf);}
+
+*{
+box-sizing: border-box;
+direction: rtl;
+scroll-behavior: smooth;
+font-family: Mothanna;
+}
+
+
+::selection{
+background-color: #4bc0c8;
+color:white;
+}
+  
+
+body,html{
+width: 100%;
+min-height: 150vh;
+overflow-x: hidden;
+padding: 0px;
+margin: 0px;
+font-size: 90%;
+}
+
+.title{
+text-decoration: none;
+color: white;
+}
+
+.logo{
+width: 100%;
+height: 10vh;
+border-bottom: 0.3px solid;
+background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+}
+
+.logo,.logocontainer,.logocontainer img,header{
+display: flex;
+justify-content: center;
+align-items: center;    
+}
+
+.logocontainer{
+width: 30vh;
+height: 10vh;
+}
+
+.logocontainer img{
+width: 100%;
+height: 100%;
+}
+
+nav,.nav{
+width: 100%;
+height: 10vh;
+display: flex;
+justify-content: space-around;
+background-color: transparent;
+align-items: center; 
+}
+
+nav{
+position: absolute;
+z-index: 999999999;
+}
+
+
+.nav{
+position: fixed;
+transition: 1s all;
+z-index: 9999999;
+color: white;
+background:transparent;
+background: rgba(0,0,0,0.45)
+}
+
+.nav h1{
+margin: 0px;
+}
+
+.nav h1,.mwaqeet{
+font-size: 2.2vmax;
+}
+
+.waz{
+width: 19.85vh;
+height:7.75vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.mwaqeet{
+margin: 0px;
+box-shadow: 0vh 6vh 5.2vh -5.2vh black;
+padding: 5px 0px;
+}
+
+.nav .toggle a{
+text-decoration: none;
+color: white;
+margin-left: 15px;
+}
+
+.nav.navigation{
+position: fixed;
+transition: 1s all;
+background-color: white;
+color: black;
+top: 0px;
+z-index: 9999999;
+margin-bottom: 20vh;
+}
+
+.nav.navigation .toggle a{
+text-decoration: none;
+color: black;
+}
+
+.nav .toggle,.nav.navigation .toggle,.nav.navigation .toggle.active {
+background-color: white;
+color: black;
+}
+
+.nav.navigation .menu .list{
+background-color: black;
+}
+
+.nav.navigation .title .waz{
+color: black;
+}
+
+
+.toggle{
+position: absolute;
+flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+padding: 0px;
+margin: 0px;
+transform: translatey(-550%);
+transition: 3s ease;
+z-index: -1;
+width: 95%;
+min-height: 43vh;
+box-shadow: 0vh 6vh 5.2vh -5.2vh black;
+background:transparent;
+color: black;
+}
+
+.toggle.active{
+position: absolute;
+display: flex;
+list-style: none;
+flex-direction: column;
+padding: 0px;
+margin: 0px;
+transform: translatey(56%);
+z-index: -1;
+transition: 1s ease;
+justify-content: center;
+align-items: center;
+width: 95%;
+box-shadow: 0vh 6vh 5.2vh -5.2vh black;
+background:transparent;
+min-height: 43vh;
+box-shadow: 0vh 6vh 5.2vh -5.2vh black;
+background: rgba(0,0,0,0.75);
+width: 100%;
+color: white;
+}
+
+
+.toggle a li{
+color: white;
+font-size: 3vh;
+padding: 11px 14px;
+}
+
+.nav.navigation .toggle.active a li{
+color: black;
+}
+
+.menu{
+width: 7.85vh;
+height:4.75vh;
+position:relative;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+cursor: pointer;
+direction: ltr;
+}
+
+.list{
+width: 7.75vh;
+height: 0.75vh;
+background: white;
+position: absolute;
+border-radius: 2vh;
+}
+
+.list:nth-child(2){
+top: 2vh;
+width: 5.75vh;
+}
+
+.list:nth-child(3){
+top: 4vh;
+width: 3.75vh;
+}
+
+.menu:hover .list{
+width: 7.85vh;
+transition: 0.5s ease-in-out;
+}
+
+
+header{
+position: relative;
+width: 100%;
+min-height: 100vh;
+}
+
+.header{
+width: 100%;
+min-height: 100vh;
+background: url("mos1.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: rgba(0, 0, 0, 0.4);
+z-index: 99;
+}
+
+.banner{
+width: 100%;
+height: 100%;
+position: absolute;
+color: white;
+/*background: rgba(0, 0, 0, 0.75);*/
+background: #256d238f;
+z-index: 999;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.banner-img,.banner-text,.banner-appointment{
+position: relative;
+width: 40vh;
+height: 57.76vh;
+text-align: center;
+box-shadow: 0vh 4vh 3.2vh -3.2vh rgba(0, 0, 0, 0.75);
+}
+
+.banner-img,.banner-img img{
+border-radius: 20vh;
+}
+
+.banner-text{
+display: flex;
+justify-content: center;
+align-items: center;   
+flex-direction: column;
+}
+
+.banner-img img{
+width: 100%;
+height: 100%;
+box-shadow: 0vh 6vh 5.2vh -5.2vh rgb(0 0 0 / 75%);
+background: rgba(226, 223, 223, 0.75); 
+/* mix-blend-mode: unset;*/
+}
+
+.dinna{
+width: 100%;
+}
+
+.dinna,.arrowdown,.arkan{
+font-size: 2.1vw;
+}
+
+.dinna,.arrowdown{
+color: white;
+}
+
+.arrowdown{
+width: 6.8vh;
+height: 6.8vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.arrowdown{
+border: 0.16vh solid #4bc0c8;
+padding: 3px;
+border-radius: 8vw;
+}
+
+.banner-appointment{
+border: 0.16px solid #4bc0c8;
+border-radius: 1.2vh;
+position: relative;
+bottom: -18vh;
+height: 67.76vh;
+z-index: -2;
+}
+
+.banner-app-overlay {
+width: 100%;
+height: 100%;
+background: linear-gradient(#00000078, #0000008a);
+z-index: -1;
+position: absolute;
+border-radius: 1.2vh;
+}
+
+.arrowdown:hover{
+background-color: white;
+color:black;
+}
+
+.banner-takweem{
+position: absolute;
+bottom: -6.2vh;
+background-color: black;
+width: 83.3vh;
+height: 15vh;
+border: 0.16vh solid #4bc0c8;
+background-color: white;
+box-shadow: 0vh 6vh 5.2vh -5.2vh rgb(0 0 0 / 75%);
+color: black;
+right: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border-radius: 1.2vh;
+}
+
+.takweem,.takweem-hegry{
+margin: 1px 5px 1px 0px;
+width: 100%;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.arkan a span{
+font-size: 1.5ch;
+}
+    
+.arkan a span{
+padding:0.1vw;
+}
+    
+    
+.arkan-container,.eL-salawat-el-khams{
+margin: 4vh 0px;
+display: flex;
+justify-content: start;
+align-items: center;
+flex-direction: column;
+min-height: 40vh;
+border: 0.3px solid#4bc0c8;
+}
+    
+.arkan{
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-columns: repeat(5,30vh);
+justify-content: center;
+align-items: center;
+}
+    
+.arkan-container a,.eL-salawat-el-khams a{
+width: 25vh;
+height: 25vh;
+border: 0.3px solid black;
+border-radius: 5px;
+padding: 0px;
+margin: 0px;
+text-decoration: none;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+direction: rtl;
+margin-left: 10px;
+color: black;
+overflow: hidden;
+border-radius: 12.5vh;
+box-shadow: 0vh 6vh 5.2vh -5.2vh rgba(0, 0, 0, 0.75);
+position:relative;
+}
+    
+.arkan-container a span,.eL-salawat-el-khams a span{
+width:100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(0, 0, 0, 0.45);
+color: white;
+font-weight: 600;
+}
+    
+.shehada{background: url('21.png');background-position: top;background-repeat: no-repeat;background-size: cover;}
+.salat{background: url('22.png');background-position: center;background-repeat: no-repeat;background-size: cover;}
+.zakat{background: url('23.png');background-position: center;background-repeat: no-repeat;background-size: cover;}
+.seyam{background: url('25.png');background-position: center;background-repeat: no-repeat;background-size: cover;}
+.haj{background: url('20.png');background-position: center;background-repeat: no-repeat;background-size: cover;}
+     
+
+.arkan-container a:nth-child(1) span,.eL-salawat-el-khams a:nth-child(1) span{
+font-size: 1.20vmax;
+}
+    
+.arkan-container a:hover,.eL-salawat-el-khams a:hover{
+transform: translateY(-10px);
+}
+
+
+.mwaqeet{
+width: 100%;
+border-bottom: 0.3px solid ;
+}
+
+.appointment{
+width: 100%;
+font-size:1.2vw;
+text-align: right;
+padding-top: 1.2vh ;
+}
+
+
+.selects {
+width:100%;
+height:12.5vh;
+display: flex;
+justify-content: center;
+/* align-items: center; */
+flex-direction: column;
+border-bottom: 0.3px solid ;
+}
+
+.selects .con,.selects .city{
+width:100%;
+height:4.75vh;
+}
+
+.selects select{
+width:100%;
+height: 100%;
+font-size:1vw;
+direction: ltr;
+cursor: pointer;
+border-radius: 1.2vh;
+}
+
+.options{
+cursor: pointer;
+}
+
+.slatwaqt{
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding:0px 1vh;
+direction: ltr;
+margin-bottom: 1vh;
+font-weight: 900;
+}
+
+.taaref-Islam{
+width: 100%;
+min-height: 25vh;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+position: relative;
+margin: 20vh 0px 0px 0px;
+border:0.3px solid#4bc0c8;
+background: linear-gradient(to top, #00b09b, #96c93d);
+color: white;
+font-weight: 900;
+border-top-left-radius: 1.2vh;
+border-bottom-left-radius: 1.2vh;
+background: url(48.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.taaref-Islam:before {
+content: "الإسلام";
+position: absolute;
+top: -6.5vh;
+right: 5px;
+padding: 1.76vh 8.8vh;
+font-size: 3.4vh;
+background: linear-gradient(to bottom, #00b09b, #96c93d9e);
+border-top-left-radius: 1.2vh;
+border-top-right-radius: 1.2vh;
+color: white;
+}
+
+.taaref{
+width: 100%;
+height: 100%;
+text-align: center;
+font-size: 3vh;
+padding: 10px 0px;
+line-height: 1.75;
+color: black;
+font-weight: 900;
+background: linear-gradient(to top, #00b09b80, #96c93d9e);
+}
+
+.banner-takweem{
+font-size: 3vh;
+
+}
+
+.islam{
+width: 100%;
+height: 100%;
+}
+
+.banner-appointment{background: url('38.png');background-position: center;background-repeat: no-repeat;background-size: cover;}
+
+.arkan-container{background: url('6.jpg');background-position: top;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;
+position: relative;
+border-top-right-radius: 1.2vh;
+border-bottom-right-radius: 1.2vh;
+}
+
+.eL-salawat-el-khams{background: url('6.jpg');background-position: top;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;
+position: relative;
+border-top-right-radius: 0vh;
+border-bottom-right-radius: 0vh;
+border-top-left-radius: 1.2vh;
+border-bottom-left-radius: 1.2vh;
+}
+
+.arkan-container:before,.eL-salawat-el-khams:before {
+content: " بنى الإسلام على خمس ";
+position: absolute;
+top: -6.25vh;
+/* width: 100%; */
+text-align: center;
+color: white;
+font-weight: 900;
+font-size: 3.84vh;
+padding: 1.6vh 2.76vh;
+background: linear-gradient(to bottom, #00b09b80, #96c93d);
+border-bottom-left-radius: 1.2vh;
+border-bottom-right-radius: 1.2vh;
+}
+
+.eL-salawat-el-khams:before {
+content: " الصلوات الخمس ";
+left: 1.76vh;
+}
+
+
+.arkan{
+height: 40vh;
+background: rgb(255 242 242 / 32%);
+}
+
+
+.list.listf.list1{
+width: 100%;
+transform: rotateZ(-45deg) translate(-2vh,2.25vh);
+transition: 1s ease-in-out;
+}
+
+.list.lists.list2{
+width: 100%;
+transition: 0.6s ease-in-out;
+opacity: 0;
+}
+
+.list.listt.list3{
+width: 100%;
+transition: 1s ease-in-out;
+transform: rotateZ(45deg) translate(-0.5vh,-0.75vh);
+}
+
+
+.arkan-explaination,.elsalah-point{
+width: 0px;
+height: 0px;
+position: relative;
+/*border: 0.3vh solid;*/
+margin: -2vh 0vh;
+overflow: hidden;
+transition: 1s ease;
+/*background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;
+border-radius: 3vh;*/
+}
+
+.arkan-explaination.explain,.elsalah-point.explain3{
+width: 100%;
+height: 40vh;
+position: relative;
+border: 0.3vh solid #4bc0c8;
+margin: 10vh 0vh;
+transform: rotatex(0deg);
+transition: 1s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;
+border-radius: 3vh;
+}
+
+
+.explaination,.salawat-point{
+width: 100%;
+height:100%;
+background: linear-gradient(to bottom, #00b09b80, #96c93d);
+z-index: 999;
+display:none;
+border-radius: 3vh;
+}
+
+.explaination.explain2,.salawat-point.explain4{
+width: 100%;
+height:100%;
+background: rgba(0,0,0,0.65);
+z-index: 999;
+display:block;
+padding: 10px;
+font-weight: 900;
+overflow-y: scroll;
+color:white;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-direction: column;
+border-radius: 3vh;
+}
+
+.source,.source a{
+width: 100%;
+padding: 5px;
+text-align: left;
+color: white;
+text-decoration: none;
+}
+
+.fajr{background: url('fajr.png');background-position: top;background-repeat: no-repeat;background-size: cover;background-color: #003467a1;}
+.duhur{background: url('dhuhr.png');background-position: center;background-repeat: no-repeat;background-size: cover;background-color: #455c0099;}
+.asr{background: url('asr.png');background-position: center;background-repeat: no-repeat;background-size: cover;background-color: #464000ab;}
+.maghrib{background: url('mag.png');background-position: center;background-repeat: no-repeat;background-size: cover;background-color: #462200b8;}
+.isha{background: url('Isha.png');background-position: center;background-repeat: no-repeat;background-size: cover;background-color: #1b0047a8;}
+
+.arkan a span{
+display:none;
+}
+
+
+.elsalat,.elquran{
+width:100%;
+min-height: 40vh;
+position:relative;
+display:flex;
+justify-content: flex-start;
+flex-direction: column;
+margin: 10vh 0vh;
+}
+
+
+.salah{
+width:100%;
+height: 8vh;
+color:black;
+font-weight: 900;
+font-size: 3.5vh;
+text-align: center;
+/*padding: 2.5vh 0vh;*/
+border-radius: 2vh;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+position: relative;
+cursor: pointer;
+}
+
+.salah hr{
+width: 15vh;
+height: 0.5vh;
+border-radius: 5vh;
+background-color: #4bc0c8;
+border: 0px;
+position: absolute;
+bottom: 0px;
+margin: 1vh;
+}
+
+.salah span{
+width:100%;
+position: absolute;
+top: 0px;
+}
+
+.elsalah{
+width:100%;
+position:relative;
+display:flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+overflow: hidden;
+}
+
+.elquran .elsalah{
+flex-direction: row-reverse;
+}
+
+.elsalah_aya,.elsalah_image{
+width: 50vh;
+height: 50vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/*.elsalah_aya{
+width:70vh;
+}*/
+
+.elsalah_hadith {
+width: 0vh;
+height: 0vh;
+/*padding: 1.2vh;
+text-align: center;
+background: white;*/
+/*box-shadow: 1px 1px 10px 1px black;
+border-radius: 1.2vh;*/
+opacity: 0;
+transition: 1s all;
+display: contents;
+}
+
+.elsalah_hadith span{
+width: 100%;
+height: 100%;
+display: none;
+transition: 1s all;
+text-align: center;
+padding: 1.2vh;
+}
+
+.elsalah:hover .elsalah_hadith span{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+transition: 1s all;
+flex-direction: column;
+}
+
+.elsalah_hadith span em {
+width: 100%;
+text-align: left;
+}
+
+.elsalah:hover .elsalah_hadith{
+display: flex;
+opacity:1;
+width: 45vh;
+height: 50vh;
+box-shadow: 1px 1px 10px 1px black;
+margin: 9vh 9vh 12vh;
+transition: 1s all;
+border-radius: 2.2vh;
+}
+
+.elsalah_image img{
+width: 100%;
+height: 100%;
+box-shadow: 0vh 2vh 2.2vh -2.2vh rgba(0, 0, 0, 0.4);
+}
+
+.salah span,.salah hr{
+transition: 1s all;
+}
+.salah hr{
+transition: 0.5s all;
+}
+
+.salah:hover hr{
+transform: translateY(-3.5vh);
+width: 30vh;
+}
+
+.salah:hover span{
+transform: translateY(3.5vh);
+color: #4bc0c8;
+font-size: 5.5vh;
+box-shadow: 0vh 6vh 5.2vh -5.2vh black;
+}
+
+.elsalat:hover,.elquran:hover{
+transition: 1s all;
+box-shadow: 0vh 6vh 5.2vh -5.2vh black;
+border-radius: 5vh;
+}
+
+/**********************************Slider**********************************/
+.delete{
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.delete-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(11,100%);
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    transition: 0.8s all;
+}
+
+
+
+.del{
+    height: 100%;
+    width: 100%; 
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.8s all;
+    padding: 0vh 3vh;
+}
+
+span.rem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+span.remove {
+    width: 20vh;
+    height: 20vh;
+    margin-bottom: 2vh;
+    border-radius: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+
+em#remove {
+    width: 100%;
+    text-align: center;
+    padding: 0vh 6vh;
+}
+
+em#delete {
+    width: 100%;
+    text-align: center;
+    padding: 0vh 6vh;
+}
+
+
+em#remove-rawy {
+    width: 100%;
+    text-align: center;
+    padding: 0vh 6vh;
+}
+
+
+.delete button {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+button.next {
+    right: 3vh;
+}
+
+
+button.prev {
+    left: 3vh;
+}
+
+/**********************************Slider**********************************/
+
+
+.random {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    position: relative;
+}
+
+.ran-ar, .ran-en {
+    width: 70vh;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 1vh;
+    box-shadow: -2px 2px 15px -0.1px grey;
+    border-radius: 3vh;
+}
+
+span.aoz {
+    width: 100%;
+    text-align: right;
+    border-bottom: 0.3vh solid;
+    padding: 5px;
+    margin-bottom: 2vh;
+}
+
+span.sadak {
+    width: 100%;
+    text-align: left;
+    border-top: 0.3vh solid;
+    padding: 5px;
+    margin-top: 2vh;
+}
+
+span.aozen {
+    width: 100%;
+    text-align: left;
+    border-bottom: 0.3vh solid;
+    padding: 5px;
+    margin-bottom: 2vh;
+}
+
+span.sadaken {
+    width: 100%;
+    text-align: right;
+    border-top: 0.3vh solid;
+    padding: 5px;
+    margin-top: 2vh;
+}
+
+.ayaran,.ayaranen{
+width: 100%;
+}
+
+.ayaranen{
+direction: ltr;
+}
+
+
+.apk-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  margin: 10vh 0vh;
+}
+
+.apk-pic h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.apk-pics {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pic {
+  width: 144px;
+  margin: 0px 5vh;
+  position: relative;
+  box-shadow: 0vh 2vh 2.2vh -2.2vh rgba(0, 0, 0, 0.4);
+  border-radius: 3vh;
+}
+
+.pic:nth-of-type(odd) {
+  bottom: -10vh;
+}
+
+
+.pic img {
+  width: 100%;
+  border-radius: 3vh;
+}
+
+.pic:hover img{
+  transform: scale(1.1);
+  transition: 1s all;
+}
+
+
+/*******************footer******************************/
+
+.generic-anchor {
+color:#8DB9ED;
+transition: 0.8s all;
+}
+
+.generic-anchor:hover{
+transform: translateX(-10px);
+color: #d87c25e7;
+}
+
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main {
+  flex: 1 1 auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
+}
+footer {
+  background: rgb(55,55,55);
+  margin-top: 15vh;
+  width: 100%
+}
+.footer-list-top {
+  width: 33.333%
+}
+.footer-list-top > li {
+  text-align: center;
+  padding-bottom: 10px
+}
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid #ccc;
+  width: calc(100% - 20px)
+}
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
+}
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff
+}
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap > a {
+  font-size: 3em
+}
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em
+  }
+  .footer-list-anchor {
+    font-size: 1.1em
+  }
+  .footer-social-connect {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .sec-res{
+display: none;
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: start;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+  .footer-list-top > li {
+     text-align: start;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}

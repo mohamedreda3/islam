@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>الحديث الشريف</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="nav.css" rel="stylesheet">
+<link href="stylation3.css" rel="stylesheet">
+<link rel="icon" href="200px-Hadith1.png">
+</head>
+<body>
+
+<!---------------------Loading-Page-------------------------->
+<div class="loading">
+<p>صلى على سيدنا محمد عليه الصلاة والسلام</p>
+<img src="i4.jpg">
+<p> اللهم صلى وسلم وبارك على سيدنا محمد عليه وعلى آله وصحبه وسلم تسليما كثيرا </p>
+</div>
+<!---------------------Loading-Page-------------------------->
+
+<!-------------------------------Nav------------------------------------>
+<div class="navv">
+<div class="nav">
+<nav> 
+<div class="tog">
+<ul class="toggle">
+<a href="index.html"><li>  الرئيسيه  </li></a>
+<a href="ayaat.html"><li>  آيات القرآن الكريم   </li></a>
+<a href="quranlive.html"><li>   القرآن الكريم بث مباشر  </li></a>
+<a href="zekr.html"><li>  الأذكار  </li></a>
+</ul>
+</div>
+
+
+<i class="fas fa-list list" onclick="togle()"></i>
+
+<div class="mode" ><label class="switch">
+<input type="checkbox" id="check" onclick=" ckeckbox()">
+<span class="slider round"></span>
+</label></div>
+
+<h1 class="logo"><a href="#"><img src="had.png"></a></h1>
+</nav>
+</div>
+</div>
+<!--<div class="clear"></div>-->
+<!-------------------------------Nav------------------------------------>
+
+
+
+
+<!-------------------------------Selector------------------------------------>
+<div class="sele">
+<div class="selector">
+<p>اختر راوى الحديث</p>
+<select name="" id="rawy" value="اختر راوى الحديث" onchange="selectemam()">
+<div class="options">
+<option value="buk"> محمد بن إسماعيل البخارى </option>
+<option value="ahm"> أحمد بن حنبل </option>
+<option value="der"> محمد بن عيسى الترمذى </option>
+<option value="mal"> مالك بن أنس </option>
+<option value="nes"> أحمد بن شعيب النسائى</option>
+<option value="mag"> ابن ماجه </option>
+<option value="seg"> أبو داود السجستانى </option>
+<option value="mus"> مسلم بن الحجاج </option>
+<option value="dar"> الدارمي السمرقندي </option>
+</div>
+</select>
+</div>
+</div>
+<!-------------------------------Selector------------------------------------>
+ <!-----------------Toggle-Button-------------------->
+<!-- Rounded switch -->
+
+
+ <!-----------------Toggle-Button-------------------->
+
+
+
+<!-------------------------------Random------------------------------------>
+<div class="rand">
+<div class="random">
+</div>
+</div>
+<!-------------------------------Random------------------------------------>
+
+
+
+<!-------------------------------Content------------------------------------>
+<div class="container">
+<div class="sec-container">
+<div class="leftside"><div class="leftsidetop ltop"></div><div class="leftsidetop lbottom"></div></div>
+<div class="hadithcont">
+<p style="width:97%;text-align: center; padding: 4px; direction: rtl; margin: 0px; border-bottom: 0.5px solid grey; margin-bottom: 3px;" > لا تكتب ف شريط البحث حديث عن كذا بل اكتب كذا مباشرة مثلا (  تريد حديث عن الكذب اكتب كلمة الكذب مباشرة ولا تكتب حديث عن الكذب أو قم بكتابة جزء من الحديث الشريف)</p>
+<!--<i class="fas fa-search"></i>-->
+<input type="text" placeholder="ابحث عن الحديث" id="hadithsearch" onkeyup="filter()">
+<div class="contahadith"></div>
+</div>
+<div class="rightside"><div class="rightsidetop rtop"></div><div class="rightsidetop rbottom"></div></div>
+</div>
+<p class="resource"> مصدر معلومات الائمة : <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9" target="blank">ويكيبيديا</a></p>
+</div>
+<!-------------------------------Content------------------------------------>
+
+
+
+
+
+<!-------------------------------Script------------------------------------>
+<script src="all.js"></script>
+<script src="hadith.js"></script>    
+<!-------------------------------Script------------------------------------>
+<div class="kal" style="direction: rtl; width: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;"></div>
+</body>
+</html>
