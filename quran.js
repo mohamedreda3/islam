@@ -208,12 +208,6 @@ $('.s-azker').offset({top:e.pageY});
 };
 
 
-for(u = 0 ; u < azkar.length ; u++){zekrs.push(azkar[u]["zekr"])};  
-var randomzekr = document.querySelector('.rand-zekr'); 
-randomzekr.innerHTML = zekrs[Math.floor(Math.random()*azkar.length )];
-setInterval(()=>{randomzekr.innerHTML = zekrs[Math.floor(Math.random()*azkar.length )];},6000)
-
-console.log(zekrs[Math.floor(Math.random()*azkar.length )]);
 
 close.addEventListener('click',function(){
 zekray.style.transform = "translatey(300%)";
