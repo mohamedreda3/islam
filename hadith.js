@@ -3,7 +3,7 @@
 
 setTimeout(()=>{document.querySelector('.loading').style.display = "none";},5000)
 
-var rand = document.querySelector('.random');
+//var rand = document.querySelector('.random');
 
 async function getdata(api,rawy){
 const res = await fetch(api);
@@ -26,9 +26,9 @@ ahadith.push(`<div class="ht-hb">
 </div>`);
 }
 
-var x = ahadith.length;
+/*var x = ahadith.length;
 var t = ahadith[Math.floor(Math.random() * x)];
-rand.innerHTML=t;
+rand.innerHTML=t;*/
 contahadith.innerHTML = ahadith.join("");
 }
 
@@ -85,8 +85,8 @@ document.querySelector('.nav').classList.toggle('dark');
 document.querySelector('.sele').classList.toggle('dark');
 document.querySelector('.selector').classList.toggle('dark');
 document.querySelector('.navv').classList.toggle('dark');
-document.querySelector('.rand').classList.toggle('dark');
-document.querySelector('.random').classList.toggle('dark');
+/*document.querySelector('.rand').classList.toggle('dark');
+document.querySelector('.random').classList.toggle('dark');*/
 document.querySelector('.container').classList.toggle('dark');
 document.querySelector('.toggle').classList.toggle('dark');
 document.querySelector('.resource').classList.toggle('dark');
