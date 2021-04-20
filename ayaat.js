@@ -3,6 +3,125 @@ var surahname =[{"number":1,"name":"سورة الفاتحة","transliteration_en
 
 /**************************************************************/
 
+/*var sur = {
+0: "سورة الفاتحة",
+1: "سورة البقرة",
+2: "سورة آل عمران",
+3: "سورة النساء",
+4: "سورة المائدة",
+5: "سورة الأنعام",
+6: "سورة الأعراف",
+7: "سورة الأنفال",
+8: "سورة التوبة",
+9: "سورة يونس",
+10: "سورة هود",
+11: "سورة يوسف",
+12: "سورة الرعد",
+13: "سورة ابراهيم",
+14: "سورة الحجر",
+15: "سورة النحل",
+16: "سورة الإسراء",
+17: "سورة الكهف",
+18: "سورة مريم",
+19: "سورة طه",
+20: "سورة الأنبياء",
+21: "سورة الحج",
+22: "سورة المؤمنون",
+23: "سورة النور",
+24: "سورة الفرقان",
+25: "سورة الشعراء",
+26: "سورة النمل",
+27: "سورة القصص",
+28: "سورة العنكبوت",
+29: "سورة الروم",
+30: "سورة لقمان",
+31: "سورة السجدة",
+32: "سورة الأحزاب",
+33: "سورة سبإ",
+34: "سورة فاطر",
+35: "سورة يس",
+36: "سورة الصافات",
+37: "سورة ص",
+38: "سورة الزمر",
+39: "سورة غافر",
+40: "سورة فصلت",
+41: "سورة الشورى",
+42: "سورة الزخرف",
+43: "سورة الدخان",
+44: "سورة الجاثية",
+45: "سورة الأحقاف",
+46: "سورة محمد",
+47: "سورة الفتح",
+48: "سورة الحجرات",
+49: "سورة ق",
+50: "سورة الذاريات",
+51: "سورة الطور",
+52: "سورة النجم",
+53: "سورة القمر",
+54: "سورة الرحمن",
+55: "سورة الواقعة",
+56: "سورة الحديد",
+57: "سورة المجادلة",
+58: "سورة الحشر",
+59: "سورة الممتحنة",
+60: "سورة الصف",
+61: "سورة الجمعة",
+62: "سورة المنافقون",
+63: "سورة التغابن",
+64: "سورة الطلاق",
+65: "سورة التحريم",
+66: "سورة الملك",
+67: "سورة القلم",
+68: "سورة الحاقة",
+69: "سورة المعارج",
+70: "سورة نوح",
+71: "سورة الجن",
+72: "سورة المزمل",
+73: "سورة المدثر",
+74: "سورة القيامة",
+75: "سورة الانسان",
+76: "سورة المرسلات",
+77: "سورة النبإ",
+78: "سورة النازعات",
+79: "سورة عبس",
+80: "سورة التكوير",
+81: "سورة الإنفطار",
+82: "سورة المطففين",
+83: "سورة الإنشقاق",
+84: "سورة البروج",
+85: "سورة الطارق",
+86: "سورة الأعلى",
+87: "سورة الغاشية",
+88: "سورة الفجر",
+89: "سورة البلد",
+90: "سورة الشمس",
+91: "سورة الليل",
+92: "سورة الضحى",
+93: "سورة الشرح",
+94: "سورة التين",
+95: "سورة العلق",
+96: "سورة القدر",
+97: "سورة البينة",
+98: "سورة الزلزلة",
+99: "سورة العاديات",
+100: "سورة القارعة",
+101: "سورة التكاثر",
+102: "سورة العصر",
+103: "سورة الهمزة",
+104: "سورة الفيل",
+105: "سورة قريش",
+106: "سورة الماعون",
+107: "سورة الكوثر",
+108: "سورة الكافرون",
+109: "سورة النصر",
+110: "سورة المسد",
+111: "سورة الإخلاص",
+112: "سورة الفلق",
+113: "سورة الناس"
+};*/
+
+
+
 
 
 /**************************************************************/
@@ -12,13 +131,21 @@ suraname = document.querySelector('.s-aya'),
 surahdata ,
 suradate = new Array(),
 suracontent = document.querySelector('.s-s-aya'),
-surahayaat = document.querySelector('.surah'),
-csurahayaat = document.querySelector('.c-surah'),
+surahayaat = document.querySelector('.surah-ayaat'),
+//csurahayaat = document.querySelector('.c-surah'),
 close = document.querySelector('.close');
 
-for(i = 0 ; i < surahname.length ; i++){if(surahname[i]["revelation_type"]=="Medinan"){surahname[i]["revelation_type"]="مدنية"}else{surahname[i]["revelation_type"]="مكية"};suras.push(`<p class="surahnames">${surahname[i]["name"]}</p>`+" عدد الآيات : "+surahname[i]["total_verses"]+"<br>"+surahname[i]["revelation_type"]);};
+close.addEventListener('click',()=>{
+surahayaat.classList.remove('activation');
+});
 
-for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" + `رقم السوره :${(i+1)}`;suraname.appendChild(surahdata);};
+
+
+
+
+for(i = 0 ; i < surahname.length ; i++){if(surahname[i]["revelation_type"]=="Medinan"){surahname[i]["revelation_type"]="مدنية"}else{surahname[i]["revelation_type"]="مكية"};suras.push(`<a href="#surah-ayaat"><p class="surahnames">${surahname[i]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[i]["total_verses"]}</p><p class="surahnames">${surahname[i]["revelation_type"]}</p><p class="surahnames"> رقم السوره :${(i+1)}</p></a>`);};
+
+for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
 var suradata = document.querySelectorAll('.aya');
 for(let i = 0 ; i < suradata.length ; i++){
 suradata[i].addEventListener('click',function(e){
@@ -33,10 +160,11 @@ fetch('https://unpkg.com/quran-json@1.0.1/json/quran/text.json')
 for(v=0;v<data.length;v++){
 if(data[v]["surah_number"] == c){
 f = (v);    
-arr.push(`${data[(f)]["content"]} ﴿${data[f]["verse_number"]}﴾ `);
-surahayaat.innerHTML =`<p class="sura">${surahname[(l-1)]["name"]}</p>` + arr.join("") + `<p class="sura bottom">صدق الله العظيم</p>`;
-csurahayaat.style.display = "block";
-$('.c-surah').offset({top:e.pageY});
+arr.push(`<span class="dcontent">${data[(f)]["content"]} (${data[f]["verse_number"]})</span>`);
+surahayaat.classList.add('activation');
+surahayaat.innerHTML =`<a href="#s-aya">قائمة السور</a><p class="sura">${surahname[(l-1)]["name"]}</p>`  + `<p class="sura center"><span class="sura centerbottom">أعوذ بالله من الشيطان الرجيم</span>${arr.join("")}</p>` + `<p class="sura bottom">صدق الله العظيم</p>`;
+//csurahayaat.style.display = "block";
+//$('.c-surah').offset({top:e.pageY});
 };
 };
 });
@@ -49,11 +177,11 @@ $('.c-surah').offset({top:e.pageY});
 .then(response => response.json())
 .then(data =>{for(i=0;i<data.length;i++){ console.log(data[i])}})*/
 
-close.addEventListener('click',function(){
+/*close.addEventListener('click',function(){
 csurahayaat.style.transform = "translatey(300%)";
 setTimeout(()=>{csurahayaat.style.display = "none";},1000);
 setTimeout(()=>{$('.c-surah').offset({top:(6000)});},600);
-});
+});*/
 
 /*var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
