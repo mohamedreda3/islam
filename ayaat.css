@@ -279,8 +279,8 @@ transform: scale(1.2);
 
 
 .aya:hover{
+background-color: #4bc0c8;
 color: white;
-background-color: darkcyan;
 font-size: 19px;
 transition: 0.4s all;
 transform: translateY(-8px);
