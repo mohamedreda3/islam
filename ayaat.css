@@ -1,20 +1,16 @@
 
 /****************************************************Fonts***************************************************************/
 
-@font-face {font-family: kufam;  src: url(fonts/Kufam-Italic-VariableFont_wght.ttf);}
-@font-face {font-family: Almarai;  src: url(fonts/Almarai-Bold.ttf);}
-@font-face {font-family: change;  src: url(fonts/Changa-Medium.ttf);}
-@font-face {font-family: lateef;  src: url(fonts/Lateef-Regular.ttf);}
-@font-face {font-family: made;  src: url(fonts/Mada-Medium.ttf);}
-@font-face {font-family: MarkaziText;  src: url(fonts/MarkaziText-Medium.ttf);}
+@font-face {font-family: Mothanna;  src: url(Mothanna.ttf);}
 
 
 /************************************************************************************************************************/
 *{
 box-sizing: border-box;
-font-family: Almarai;
+font-family: Mothanna;
 font-weight: bolder;
 color:black;
+scroll-behavior: smooth;
 }
 
 body,html{
@@ -213,7 +209,7 @@ cursor: pointer;
 
 /************************Search*************************/
 
-.s-aya,.aya{
+.s-aya{
 display: flex;
 justify-content: center;
 align-items: center;
@@ -230,7 +226,7 @@ margin-bottom: 150px;
 
 .aya {
 border: 1px solid;
-width: 150px;
+width: 230px;
 height: 150px;
 cursor: pointer;
 border-radius: 3px;
@@ -294,12 +290,30 @@ transform: translateY(-8px);
 width: 100%;
 padding: 10px;
 line-height: 6.5rem;
-word-spacing: 0.5rem;
 direction: rtl;
 font-size:36px;
 box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
 border: 0.0625rem solid #fafbfe;
 border-radius: 10px;
+}
+
+a[href="#surah-ayaat"] {
+text-decoration: none;
+/* color: brown; */
+width: 100%;
+height: 100%; 
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+padding: 2vh 0vh 0vh;
+}
+
+.surahnames{
+margin:0px;
+padding:0px;
+width:100%;
+text-align: center;
 }
 
 .sura{
@@ -308,14 +322,38 @@ text-align: center;
 color: white;
 background-color: black;
 border-radius: 15px;
+padding: 2vh;
+display: flex;
+flex-direction: column;
 }
 
-.sura:hover{
-cursor: pointer;
-box-shadow: 1px 1px 5px 2px grey;
+.dcontent {
+    padding: 1.5vh; 
+    margin: 0px;
+    width: 100%;
+    direction: ltr;
+    text-align: right;
+    background: aliceblue;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff; 
+    margin: 1.1vh 0vh;
+    border-radius: 1vh;
 }
 
-.bottom{
+.center{
+    background-color: white;
+    color: black;
+    text-align: right;
+    direction: rtl;
+    line-height: 1.5;
+    box-shadow: 1px 1px 5px 2px grey;
+}
+
+.centerbottom{
+    width: 100%;
+    text-align: center;    
+}
+
+.bottom,.centerbottom{
 border-bottom: 0px;
 border-top: 1px solid grey;
 }
@@ -363,7 +401,22 @@ border-right: 0px;
 z-index: 888;
 }
      
+
+.surah-ayaat {
+    width: 60%;
+    height: 100%;
+    display:none;
+}
     
+.surah-ayaat.activation{
+    width: 60%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    flex-direction: column;
+}
     
 /***********************************medias********************************/
 @media(min-width:2500px){
@@ -378,9 +431,12 @@ line-height: 1.5rem;
 font-size:15px;
 }
 }
-@media (max-width:400px){
+@media (max-width:680px){
 .aya{
 margin: 10px 0px;
+}
+.surah-ayaat.activation{
+width: 100%;
 }
 }
 @media (max-width:350px){
