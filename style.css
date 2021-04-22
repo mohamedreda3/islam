@@ -1187,7 +1187,7 @@ footer {
 .footer-social-overlap > a {
   font-size: 3em
 }
-.footer-social-overlap > a:not(:first-child) {
+.footer-social-overlap{
   margin-left: 0.38em
 }
 .footer-bottom-section {
@@ -1283,6 +1283,7 @@ display: none;
 @media only screen and (max-width: 480px) {
   .footer-social-overlap {
         margin: 1vh auto;
+        justify-content: center;
   }
   .footer-bottom-rights {
     display: block
