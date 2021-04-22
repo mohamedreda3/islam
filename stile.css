@@ -113,7 +113,9 @@ bottom: -23.2vh;
 }
 
 
- 
+ .dinna,.arrowdown,.arkan a span , .mwaqeet ,.arkan-container h1,.mwaqeet,.takweem,.arkan a:nth-child(1) span {
+font-size: 3.5vh;
+}   
 
 
 .banner-appointment{
@@ -127,9 +129,7 @@ width: 100%;
 height: 10.76vh;
 /* left: -46px; */
 }
-.dinna,.arrowdown,.arkan a span , .mwaqeet ,.arkan-container h1,.mwaqeet,.takweem,.arkan a:nth-child(1) span {
-font-size: 3.5vh;
-}   
+
 }
 
 @media (max-width:354px){
