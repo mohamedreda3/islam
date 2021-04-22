@@ -131,7 +131,7 @@ suraname = document.querySelector('.s-aya'),
 surahdata ,
 suradate = new Array(),
 suracontent = document.querySelector('.s-s-aya'),
-surahayaat = document.querySelector('.surah-ayaat'),
+surahayaat = document.querySelector('.surah-ayaat');
 //csurahayaat = document.querySelector('.c-surah');
 
 
