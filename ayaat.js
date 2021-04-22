@@ -132,7 +132,7 @@ surahdata ,
 suradate = new Array(),
 suracontent = document.querySelector('.s-s-aya'),
 surahayaat = document.querySelector('.surah-ayaat'),
-//csurahayaat = document.querySelector('.c-surah'),
+//csurahayaat = document.querySelector('.c-surah');
 
 
 
