@@ -54,7 +54,7 @@ list3.classList.remove('list3');
 }
 
 
-fetch('http://api.aladhan.com/v1/hijriCalendarByCity?city=Abu%20Hammad&country=Egypt ').then(res=>res.json()).then((data)=>{console.log(data)})
+fetch('https://api.aladhan.com/v1/hijriCalendarByCity?city=Abu%20Hammad&country=Egypt ').then(res=>res.json()).then((data)=>{console.log(data)})
 
 /****************************Mawaqeet Salat********************************/
 var hist = new Date();
@@ -69,7 +69,7 @@ var selection = document.querySelector('.city');
 
 /*fetch(`https://api.pray.zone/v2/times/day.json?city=tanta&date=${hist.getFullYear()}-${(hist.getMonth()+1)}-${hist.getDate()}`).then(res=>res.json()).then((data)=>{*/
 
-fetch(`http://api.aladhan.com/v1/hijriCalendarByCity?city=Tanta&country=Egypt`).then(res=>res.json()).then((data)=>{
+fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=Tanta&country=Egypt`).then(res=>res.json()).then((data)=>{
 var t =new Number();
 for (var m = 0; m < data["data"].length; m++) {
 if(data["data"][m]["date"]["readable"] == date){
@@ -102,7 +102,7 @@ if(this.value == array8["0"][f]){
 x=f;
 }
 }
-fetch(`http://api.aladhan.com/v1/hijriCalendarByCity?city=${array8["0"][x]}&country=${array9["0"][41]}`).then(res=>res.json()).then((data)=>{
+fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=${array8["0"][x]}&country=${array9["0"][41]}`).then(res=>res.json()).then((data)=>{
 var t = new Number();
 for (var m = 0; m < data["data"].length; m++) {
 if(data["data"][m]["date"]["readable"] == date){
@@ -176,7 +176,7 @@ if(this.value == array2["0"][f]){
 x=f;
 }
 }
-fetch(`http://api.aladhan.com/v1/hijriCalendarByCity?city=${array2["0"][x]}&country=${arr["0"][c]}`).then(res=>res.json()).then((data)=>{
+fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=${array2["0"][x]}&country=${arr["0"][c]}`).then(res=>res.json()).then((data)=>{
 var t = new Number();
 for (var m = 0; m < data["data"].length; m++) {
 if(data["data"][m]["date"]["readable"] == date){
