@@ -133,12 +133,6 @@ suradate = new Array(),
 suracontent = document.querySelector('.s-s-aya'),
 surahayaat = document.querySelector('.surah-ayaat'),
 //csurahayaat = document.querySelector('.c-surah'),
-close = document.querySelector('.close');
-
-close.addEventListener('click',()=>{
-surahayaat.classList.remove('activation');
-});
-
 
 
 
