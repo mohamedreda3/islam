@@ -1250,10 +1250,16 @@ display: none;
     margin-bottom: 10px;
     padding: 0 10px
   }
-  .footer-social-overlap {
+.footer-social-overlap {
     display: flex;
     justify-content: start;
-  }
+    flex-wrap: wrap;
+}
+    
+    .generic-anchor {
+    margin-top:1vh;
+    }
+    
   .footer-social-icons-wrapper {
     width: 100%;
     padding: 0
