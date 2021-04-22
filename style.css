@@ -1103,6 +1103,7 @@ span.soc {
     border-radius: 1vh;
     text-decoration: none;
     color: white;
+    font-family: cursive;
 }
 
 .generic-anchor:hover,.footer-list-top ul li h4:hover{
