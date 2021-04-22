@@ -1265,9 +1265,9 @@ display: none;
     width: 100%;
     padding: 0
   }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 20px;
-  }
+  .footer-social-overlap{
+    margin: 1vh auto;
+    }
   .footer-bottom-section {
     padding: 0 5px 10px 5px
   }
@@ -1281,9 +1281,6 @@ display: none;
   }
 }
 @media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
-    margin: auto
-  }
   .footer-social-overlap > a:not(:first-child) {
     margin-left: 0;
   }
