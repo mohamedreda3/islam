@@ -23,6 +23,8 @@ top:0px;
 left:0px;
 }
 
+
+
 .loading img{
 width:200px;
 height: 200px;
@@ -1085,12 +1087,25 @@ direction: ltr;
 
 /*******************footer******************************/
 
+
 .generic-anchor {
 color:#8DB9ED;
 transition: 0.8s all;
 }
 
-.generic-anchor:hover{
+span.soc {
+    font-size: 4vh;
+    /* height: 5vh; */
+    padding: 1.5vh 3.5vh;
+    margin: 1vh;
+    width: 5vh;
+    background: orangered;
+    border-radius: 1vh;
+    text-decoration: none;
+    color: white;
+}
+
+.generic-anchor:hover,.footer-list-top ul li h4:hover{
 transform: translateX(-10px);
 color: #d87c25e7;
 }
@@ -1160,6 +1175,7 @@ footer {
 }
 .footer-social-connect {
   display: flex;
+    flex-wrap:wrap;
   align-items: center;
   font: 3.5em "Oswald", sans-serif;
   color: #fff
