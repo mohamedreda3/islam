@@ -1281,8 +1281,8 @@ display: none;
   }
 }
 @media only screen and (max-width: 480px) {
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 0;
+  .footer-social-overlap {
+        margin: 1vh auto;
   }
   .footer-bottom-rights {
     display: block
