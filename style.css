@@ -70,6 +70,7 @@ color:white;
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 ::selection {
     background-color: #4bc0c8;
     color: white;

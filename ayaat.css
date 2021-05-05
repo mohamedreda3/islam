@@ -17,6 +17,7 @@ font-weight: 900;
 font-family: mcs;
 }
 
+
 .aya p{
     font-size: 3vh;
 }
@@ -402,6 +403,7 @@ flex-direction: column;
     margin: 1.1vh 0vh;
     border-radius: 1vh;
     word-spacing: 0.2vh;
+    user-select: all;
 }
 
 .center{

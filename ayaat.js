@@ -157,91 +157,87 @@ for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');su
 suradata = document.querySelectorAll('.aya');
 
 
+/********************* Arrange ************************/
+
+
 mak.addEventListener('click',function(e){
-    suraname.innerHTML = " ";
-    suras = new Array();
-    nums = new Array();
-    console.log(suras.length);
-    for(d = 0 ; d < surahname.length ; d++){
-    var x =new Number();
-    if(surahname[d]["revelation_type"] == "مكية" || surahname[d]["revelation_type"] == "Meccan"){
-        surahname[d]["revelation_type"] = "مكية";
-    suras.push(`<a href="#surah-ayaat"><p class="surahnames suratnames">${surahname[d]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[d]["total_verses"]}</p><p class="surahnames">${surahname[d]["revelation_type"]}</p><p class="surahnames surahnum">رقم السوره :${(d+1)}</p></a>`);
+suraname.innerHTML = " ";
+suras = new Array();
+nums = new Array();
+console.log(suras.length);
+for(d = 0 ; d < surahname.length ; d++){
+var x =new Number();
+if(surahname[d]["revelation_type"] == "مكية" || surahname[d]["revelation_type"] == "Meccan"){
+surahname[d]["revelation_type"] = "مكية";
+suras.push(`<a href="#surah-ayaat"><p class="surahnames suratnames">${surahname[d]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[d]["total_verses"]}</p><p class="surahnames">${surahname[d]["revelation_type"]}</p><p class="surahnames surahnum">رقم السوره :${(d+1)}</p></a>`);
 nums.push(surahname[d]["number"]);
 }
-    }
-    for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
-    console.log(suras.length);
+}
+for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
+console.log(suras.length);
 suratnames = document.querySelectorAll('.suratnames');
 suradata = document.querySelectorAll('.aya');
 suratnums = document.querySelectorAll('.surahnum');
-retus()
-    });
+retus();
+});
 
     
-    mad.addEventListener('click',function(e){
-    suraname.innerHTML = " ";
-    suras = new Array();
-    nums = new Array();
-    console.log(suras.length);
-    for(d = 0 ; d < surahname.length ; d++){
-    var x =new Number();
-    if(surahname[d]["revelation_type"] == "مدنية"){
-    suras.push(`<a href="#surah-ayaat"><p class="surahnames suratnames">${surahname[d]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[d]["total_verses"]}</p><p class="surahnames">${surahname[d]["revelation_type"]}</p><p class="surahnames surahnum">رقم السوره :${(d+1)}</p></a>`);
+mad.addEventListener('click',function(e){
+suraname.innerHTML = " ";
+suras = new Array();
+nums = new Array();
+console.log(suras.length);
+for(d = 0 ; d < surahname.length ; d++){
+var x =new Number();
+if(surahname[d]["revelation_type"] == "مدنية"){
+suras.push(`<a href="#surah-ayaat"><p class="surahnames suratnames">${surahname[d]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[d]["total_verses"]}</p><p class="surahnames">${surahname[d]["revelation_type"]}</p><p class="surahnames surahnum">رقم السوره :${(d+1)}</p></a>`);
 nums.push(surahname[d]["number"]);
 }
-    }
-    for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
-    console.log(suras.length);
+}
+for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
+console.log(suras.length);
 suratnames = document.querySelectorAll('.suratnames');
 suradata = document.querySelectorAll('.aya');
 suratnums = document.querySelectorAll('.surahnum');
-retus()
-    });
+retus();
+});
     
 
-    all.addEventListener('click',function(e){
-        suraname.innerHTML = " ";
-        suras = new Array();
-        nums = new Array();
-        console.log(suras.length);
-        for(i = 0 ; i < surahname.length ; i++){
-            if(surahname[i]["revelation_type"]=="Medinan"||surahname[i]["revelation_type"] == "مدنية"){surahname[i]["revelation_type"]="مدنية"}else{surahname[i]["revelation_type"]="مكية"};suras.push(`<a href="#surah-ayaat"><p class="surahnames suratnames">${surahname[i]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[i]["total_verses"]}</p><p class="surahnames">${surahname[i]["revelation_type"]}</p><p class="surahnames surahnum"> رقم السوره :${(i+1)}</p></a>`);
-            nums.push(surahname[i]["number"]);
-            };
-        for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
-        console.log(suras.length);
-    suratnames = document.querySelectorAll('.suratnames');
-    suradata = document.querySelectorAll('.aya');
-    suratnums = document.querySelectorAll('.surahnum');
-    retus()
-        });
+all.addEventListener('click',function(e){
+suraname.innerHTML = " ";
+suras = new Array();
+nums = new Array();
+console.log(suras.length);
+for(i = 0 ; i < surahname.length ; i++){
+if(surahname[i]["revelation_type"]=="Medinan"||surahname[i]["revelation_type"] == "مدنية"){surahname[i]["revelation_type"]="مدنية"}else{surahname[i]["revelation_type"]="مكية"};suras.push(`<a href="#surah-ayaat"><p class="surahnames suratnames">${surahname[i]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[i]["total_verses"]}</p><p class="surahnames">${surahname[i]["revelation_type"]}</p><p class="surahnames surahnum"> رقم السوره :${(i+1)}</p></a>`);
+nums.push(surahname[i]["number"]);
+};
+for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
+console.log(suras.length);
+suratnames = document.querySelectorAll('.suratnames');
+suradata = document.querySelectorAll('.aya');
+suratnums = document.querySelectorAll('.surahnum');
+retus();
+});
     
-
-
-
-
-
-
-
+/********************* Arrange ************************/
 
 
 
 var c;
-
+// var content;
 function retus(){
-
-/********************* Arrange ************************/
-
 for(let i = 0 ; i < suradata.length ; i++){
 suratnums = document.querySelectorAll('.surahnum');
 suratnames = document.querySelectorAll('.suratnames');
 
 suradata[i].addEventListener('click',function(e){
-    console.log(i)
-    console.log(nums[i])
-    //console.log(surahname[(i+1)]["number"])
-    console.log(suradata.length)
+
+
+// console.log(i);
+// console.log(nums[i]);
+// //console.log(surahname[(i+1)]["number"]);
+// console.log(suradata.length);
 var l = (i);
 
 var arr = new Array();
@@ -250,21 +246,21 @@ for(let m = 0 ; m < suradata.length ; m++){
 arr20.push(suratnames[m].innerHTML)
 }
 
-console.log(arr20)
-console.log(arr20[0] + "  " + arr20[1] + "  " + arr20[2])
-console.log(suratnums[0].innerHTML.length)
-console.log(suratnums[0].innerHTML)
+// console.log(arr20);
+// console.log(arr20[0] + "  " + arr20[1] + "  " + arr20[2]);
+// console.log(suratnums[0].innerHTML.length);
+// console.log(suratnums[0].innerHTML);
 
-console.log("*********************************************************")
-//console.log(surahname[(i+1)]["number"] == nums[i])
-//console.log(surahname[(i+1)]["number"] + "    " + nums[(i)])
-console.log(l + "   " + i + "    " + surahname[i]["number"] + "    " + suratnames[i].innerHTML);
-console.log("*********************************************************")
+// console.log("*********************************************************")
+// //console.log(surahname[(i+1)]["number"] == nums[i])
+// //console.log(surahname[(i+1)]["number"] + "    " + nums[(i)])
+// console.log(l + "   " + i + "    " + surahname[i]["number"] + "    " + suratnames[i].innerHTML);
+// console.log("*********************************************************")
 
 
 
-console.log("-------------------------------"+"\n"+this.innerText+"\n"+"-------------------------------");
-console.log("-------------------------------"+"\n"+this.innerText.includes(surahname[(i+1)]["name"])+"\n"+"-------------------------------");
+// console.log("-------------------------------"+"\n"+this.innerText+"\n"+"-------------------------------");
+// console.log("-------------------------------"+"\n"+this.innerText.includes(surahname[(i+1)]["name"])+"\n"+"-------------------------------");
 for(q = 0 ; q < surahname.length ; q++){
 if(surahname[(q)]["name"] == arr20[(i)]){
 c = (q);
@@ -288,7 +284,7 @@ data[v]["surah_number"]
 };
 // console.log(cvc)
 // console.log(cvn)
-// console.log("************************************************************************************************************************");
+// console.log('<p class="copied">copied..!!</p>***********************************************************************************');
 for(g = 0 ; g < cvn.length ; g++){
 arr.push(`<span class="dcontent">${cvc[g]} (${cvn[g]})</span>`);
 }
@@ -298,53 +294,55 @@ surahayaat.innerHTML =`<a class="row" href="#s-aya">قائمة السور</a><p 
 });
 }
 }
-console.log(c)
+// console.log(c);
 });
 };
 };
-
-/********************* Arrange ***********************
-
-mak.addEventListener('click',function(e){
-suras = new Array();
-suraname.innerHTML = " ";
-for(d = 0 ; d < surahname.length ; d++){
-var x =new Number();
-if(surahname[d]["revelation_type"] == "مكية"){
-suras.push(`<a href="#surah-ayaat"><p class="surahnames">${surahname[d]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[d]["total_verses"]}</p><p class="surahnames">${surahname[d]["revelation_type"]}</p><p class="surahnames"> رقم السوره :${(d+1)}</p></a>`);
-}
-}
-for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
-console.log(suras.length);
-});
-
-mad.addEventListener('click',function(e){
-suraname.innerHTML = " ";
-suras = new Array();
-for(d = 0 ; d < surahname.length ; d++){
-var x =new Number();
-if(surahname[d]["revelation_type"] == "مدنية"){
-suras.push(`<a href="#surah-ayaat"><p class="surahnames">${surahname[d]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[d]["total_verses"]}</p><p class="surahnames">${surahname[d]["revelation_type"]}</p><p class="surahnames"> رقم السوره :${(d+1)}</p></a>`);
-}
-}
-for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
-console.log(suras.length);
-
-});
-
-
-all.addEventListener('click',function(e){
-suraname.innerHTML = " ";
-suras = new Array();
-for(i = 0 ; i < surahname.length ; i++){
-suras.push(`<a href="#surah-ayaat"><p class="surahnames">${surahname[i]["name"]}</p><p class="surahnames"> عدد الآيات : ${surahname[i]["total_verses"]}</p><p class="surahnames">${surahname[i]["revelation_type"]}</p><p class="surahnames"> رقم السوره :${(i+1)}</p></a>`);
-};
-for(i = 0 ; i < suras.length ; i++){surahdata = document.createElement('div');surahdata.classList.add('aya');surahdata.innerHTML = suras[i] + "<br>" ; suraname.appendChild(surahdata)};
-});
-
-
-******************** Arrange ***********************/
 retus();
+
+// function cob(){
+// content = document.querySelectorAll('.dcontent');
+// for(var z = 0 ; z < content.length ; z++){
+// content[i].addEventListener("click",function(){
+// console.log(this.innerText);
+// })
+// }
+// console.log(content)
+// }
+
+
+function filter(){
+var search , name , profile;
+search = document.getElementById('searchsurah').value.toUpperCase();
+profile = document.getElementsByClassName('aya');
+for(var i = 0 ; i < profile.length ; i++ ){
+name = profile[i].getElementsByClassName('surahnames');
+if(name[0].innerHTML.toUpperCase().indexOf(search)>-1){
+profile[i].style.display = "flex";
+}else{
+profile[i].style.display = "none";
+};
+};
+};
+    
+function makeempty(){
+document.getElementById('searchsurah').value = "";
+var profile = document.getElementsByClassName('aya');
+for(i=0;i<profile.length;i++){
+profile[i].style.display = "flex";
+};
+};
+    
+var tole = document.querySelector('.tog');
+    
+function togle(){
+tole.classList.toggle('active');
+};
+
+
+
+
+
 
 
 /*fetch('https://unpkg.com/quran-json@1.0.1/json/quran/text.json')
@@ -368,34 +366,4 @@ console.log(xhr);
 xhr.open("GET","names_of_allah.json",true);
 xhr.send();*/
 //fetch('names_of_allah.json').then(res=>res.json()).then(data => console.log(data));
-//لازم تشتغل على لايف سيرفر
-
-function filter(){
-var search , name , profile;
-search = document.getElementById('searchsurah').value.toUpperCase();
-profile = document.getElementsByClassName('aya');
-for(var i = 0 ; i < profile.length ; i++ ){
-name = profile[i].getElementsByClassName('surahnames');
-if(name[0].innerHTML.toUpperCase().indexOf(search)>-1){
-profile[i].style.display = "flex";
-}else{
-profile[i].style.display = "none";
-};
-};
-};
-
-
-
-function makeempty(){
-document.getElementById('searchsurah').value = "";
-var profile = document.getElementsByClassName('aya');
-for(i=0;i<profile.length;i++){
-profile[i].style.display = "flex";
-};
-};
-
-var tole = document.querySelector('.tog');
-
-function togle(){
-tole.classList.toggle('active');
-};
+// لازم تشتغل على لايف سيرفر
