@@ -27,6 +27,8 @@ box-sizing: border-box;
 font-family: Almarai;
 font-weight: bolder;
 color: white;
+border-radius: 1vh;
+transition: 1s all;
 }
 
 body,html,.f-des{
@@ -41,11 +43,11 @@ margin: 0px;
 justify-content: flex-start;
 flex-direction: column;
 align-items: center;
-background-color: #363030;
+background-color: #373737;
 }
 
 .container,.f-des{
-padding:10px;
+padding: 1vh 3vh 2vh 0vh;
 width: 100%;
 display: flex;
 overflow-x: hidden;
@@ -403,11 +405,11 @@ align-items: center;
 flex-wrap: wrap;
 flex-direction: column;
 direction: rtl;
+border-radius: 0vh 1vh 1vh 0vh;
 }
 
 .f-azker{
-background-color: #3e3838;
-box-shadow: 1px 2px 5px 2px grey;
+background-color: #2e2d2d;
 border: none;
 }
 
@@ -483,6 +485,7 @@ box-shadow: 0.2px 0.3px 10px 1px black;
 background: none;
 cursor: pointer;
 font-family: change;
+color: white;
 }
 
 .title:hover{
@@ -503,6 +506,11 @@ border: 1px solid;
 display: none;
 transition: 1s ease-in;
 border-radius: 5px;
+z-index: 999;
+}
+
+.count:active{
+ transform:translateY(-2vh);
 }
 
 .s-azker .close{
@@ -521,6 +529,7 @@ top: -53px;
 right: -3px;
 border-bottom: 0px;
 transition: 0.5s ease-in;
+color: white;
 }
 
 .s-azker::before{
@@ -622,6 +631,7 @@ border-radius: 10px;
 padding: 15px;
 transform: translateY(10px);
 transition: 0.5s ease-in;
+color: white;
 }
 
 .zekrname:hover{
@@ -640,18 +650,22 @@ margin-bottom: 30px;
 
 
 /*****************************media**********************************/
-@media(min-width:2500px){
+/*@media(min-width:2500px){
 .container{
 margin-top: 300px;
 }
 
-}
+}*/
 
 
 @media(max-width:550px){
     
 .name,.rand-zekr{
 word-spacing: 0.29rem;
+}
+
+.container,.f-des{
+    padding:0vh;
 }
 
 body{

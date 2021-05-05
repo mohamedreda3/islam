@@ -1,5 +1,9 @@
-var aya_ar = document.querySelector('.ayaran') ,
-aya_en = document.querySelector('.ayaranen'); 
+var ran = document.querySelector('.ran'), 
+aya_ar = document.querySelector('.ayaran') ,
+aya_en = document.querySelector('.ayaranen'),
+close = document.querySelector('.x'); 
+
+close.addEventListener('click',()=>{ran.style.display == "none" ? ran.style.display = "flex" : ran.style.display = "none";})
 
 setInterval(()=>{
 num = Math.floor(Math.random()*6236);
@@ -7,10 +11,11 @@ fetch(`https://salamquran.com/en/api/v6/aya?index=${num}`)
 .then(res=>res.json())
 .then((data)=>{
 aya_ar.innerHTML = data["result"]["text"];
-aya_en.innerHTML = data["result"]["translate"]["text"];
+// aya_en.innerHTML = data["result"]["translate"]["text"];
+ran.style.display == "none" ? ran.style.display = "flex" : ran.style.display = "none";
 })}
-,9000);
-
+,15000);
+ 
 
 var navigation = document.querySelector('.nav');
 var list1 = document.querySelector('.listf');
@@ -202,7 +207,8 @@ mwaket.innerHTML = mwaqeet.join('');
 })
 })
 var h = document.querySelectorAll(".slatwaqt");
-/****************************Mawaqeet Salat********************************/var elsalahpoint = document.querySelector('.elsalah-point'),
+/****************************Mawaqeet Salat********************************/
+var elsalahpoint = document.querySelector('.elsalah-point'),
 salawatpoint = document.querySelector('.salawat-point'),
 fajr = document.querySelector('.fajr'),
 duhur = document.querySelector('.duhur'),
@@ -318,7 +324,7 @@ next = document.querySelector('.next'),
 prev = document.querySelector('.prev'),
 index = 0;
 
-prev.addEventListener('click',()=>{
+/*prev.addEventListener('click',()=>{
 index < del.length-1 ? index++: index = 0; 
 remove.style.marginLeft = `-${index*2*100}%`;
 });
@@ -326,7 +332,19 @@ remove.style.marginLeft = `-${index*2*100}%`;
 next.addEventListener('click',()=>{
 index > 0  ? index--: index = del.length-1 ; 
 remove.style.marginLeft = `-${index*2*100}%`
-});
+});*/
+
+prev.addEventListener('click',()=>{
+
+    if (index < del.length-1)  {index++; remove.style.transition = "1s all"} else {index = 0; remove.style.transition = "0.05s all" }
+    
+    remove.style.marginLeft = `-${index*2*100}%`;
+    });
+    
+    next.addEventListener('click',()=>{
+    if (index > 0)   {index--; remove.style.transition = "1s all"} else {index = del.length-1; remove.style.transition = "0.05s all" } ; 
+    remove.style.marginLeft = `-${index*2*100}%`
+    });
 
 
 
@@ -338,3 +356,9 @@ picsarr.push(`<div class="pic"><img src=${r}.jpg></div>`);
 apkpics.innerHTML = picsarr.join('');
 
 setTimeout(()=>{document.querySelector('.loading').style.display = "none";},5000)
+
+
+/********** Scroll Reveal ***********/
+
+
+/********** Scroll Reveal ***********/

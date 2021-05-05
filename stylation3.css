@@ -13,6 +13,7 @@
 box-sizing: border-box;
 font-family: kufam; 
 border-color: white;
+transition: 1s all;
 }
 
 /*****************Body,Html****************/

@@ -2,6 +2,7 @@
 /****************************************************Fonts***************************************************************/
 
 @font-face {font-family: Mothanna;  src: url(Mothanna.ttf);}
+@font-face {font-family: mcs;  src: url(mcs.ttf);}
 
 
 /************************************************************************************************************************/
@@ -9,15 +10,22 @@
 box-sizing: border-box;
 font-family: cursive;
 font-weight: bolder;
-color:black;
-scroll-behavior: smooth;
+border-radius: 1vh;
+transition: 1s all;
+font-size: 4.4vh;
+font-weight: 900;
+font-family: mcs;
+}
+
+.aya p{
+    font-size: 3vh;
 }
 
 body,html{
 position: relative;
 width: 100%;
 min-height: 100%;
-padding: 0px 10px;
+padding: 0px;
 margin: 0px;
 display: flex;
 justify-content: center;
@@ -25,11 +33,15 @@ align-items: center;
 flex-direction: column;
 }
 
+.footer-social-small{
+color:white;
+}
 
 /*****************Nav****************/
 .navv,.nav,nav{
     display: flex;
     justify-content: center;
+    color:black;
     align-items: center;
     }
     
@@ -41,6 +53,7 @@ flex-direction: column;
     }
     
     .logo a,.toggle a{
+    color:black;
     text-decoration: none;
     }
     
@@ -53,11 +66,11 @@ flex-direction: column;
     position: relative;
     top: 13px;
     width: 97%;
+    color:black;
     min-height: 7vh;
     } 
     
 
-    
     
     nav{
     position: relative;
@@ -68,7 +81,7 @@ flex-direction: column;
     border-radius: 4px;
     align-items: center;
     box-shadow: 1px 2px 5px 2px grey;
-    
+    color:black;
     }
     
     .logo a{
@@ -116,6 +129,7 @@ flex-direction: column;
     /* transform: translateY(-100%); */
     transition: 1s;
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+    filter: drop-shadow(2px 2px 6px black);
     border: 0.0625rem solid #fafbfe;
     }
     
@@ -158,11 +172,44 @@ flex-direction: column;
     z-index: 99999;
     background-color: white;
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
-border: 0.0625rem solid #fafbfe;
+    filter: drop-shadow(2px 2px 6px black);
     }
     
     
-    /*****************Nav****************/
+/*****************Nav****************/
+.row {
+    color: black;
+    padding: 2vh;
+    border-bottom: 0.5vh solid;
+    margin-bottom: 10vh;
+    border-radius: 0vh;
+}
+
+
+p.surat {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4vh;
+    padding: 2vh;
+    background: black;
+    color: white;
+}
+
+.surat span {
+    background: white;
+    padding: 3vh;
+    width: 10vh;
+    height: 10vh;
+    color: black;
+    border-radius: 13vh;
+    text-align: center;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
 
 .container{
 padding:10px;
@@ -188,6 +235,7 @@ font-size: 12px;
 direction: rtl;
 outline: none;
 box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+filter: drop-shadow(2px 2px 6px black);
 border: 0.0625rem solid #fafbfe;
 }
 
@@ -208,6 +256,14 @@ cursor: pointer;
 }
 
 /************************Search*************************/
+
+
+.btn5{
+cursor: pointer;
+background: transparent;
+border: 0.1vh solid grey;
+outline: none;
+}
 
 .s-aya{
 display: flex;
@@ -236,9 +292,9 @@ margin: 10px;
 /* background-color: darkolivegreen; */
 color: black;
 transition: 2s ease;
-box-shadow: 0.2px 0.3px 10px 1px black;
 border-radius: 10px;
-box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+box-shadow: inset 2px 2px 3px #b8b9be, inset -8px 8px 7px 0px #ffffff, inset -2px -8px 8px -2px #ffffff;
+filter: drop-shadow(2px 2px 6px black);
 border: 0.0625rem solid #fafbfe;
 }
 
@@ -279,13 +335,21 @@ transform: scale(1.2);
 
 
 .aya:hover{
-background-color: #4bc0c8;
-color: white;
-font-size: 19px;
 transition: 0.4s all;
 transform: translateY(-8px);
+font-weight: bold;
 }
 
+
+
+.aya a,.aya p{
+color: black;
+}
+    
+.aya:hover p{
+font-weight: bold;
+font-size: 3.3vh;
+}
 .surah{
 width: 100%;
 padding: 10px;
@@ -337,6 +401,7 @@ flex-direction: column;
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff; 
     margin: 1.1vh 0vh;
     border-radius: 1vh;
+    word-spacing: 0.2vh;
 }
 
 .center{
