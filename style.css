@@ -68,7 +68,7 @@ color:white;
     border-radius: 1.5vh;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #926aa6;
 }
 
 ::selection {
@@ -900,7 +900,7 @@ border-radius: 5vh;
     justify-content: space-around;
     align-items: center;
     transition: 0.8s all;
-    background: orangered;
+    background: #926aa6;
     margin-right: 3vh;
     padding: 3vh 0vh;
     border-radius: 2vh;
@@ -918,7 +918,7 @@ border-radius: 5vh;
     align-items: center;
     direction: ltr;
     transition: 0.8s all;
-    background: orangered;
+    background: #926aa6;
     margin-right: 3vh;
     padding: 3vh 0vh;
     border-radius: 2vh;
