@@ -342,7 +342,27 @@ tole.classList.toggle('active');
 
 
 
+/**************** Scroll Reveal *****************/ 
 
+window.sr = ScrollReveal();
+
+sr.reveal('.aya', {
+duration:500,
+orgin:"bottom",
+distance:"80px"
+});
+
+sr.reveal('.nav', {duration:500});
+sr.reveal('.logo', {duration:570});
+sr.reveal('.list', {duration:600});
+sr.reveal('.search', {duration:670});
+sr.reveal('.title', {duration:700});
+sr.reveal('.arrange', {duration:750});
+sr.reveal('.farz', {duration:820});
+sr.reveal('.all', {duration:870});
+sr.reveal('.mak', {duration:900});
+sr.reveal('.mad', {duration:930});
+sr.reveal('.flex-rw', {duration:1000});
 
 
 /*fetch('https://unpkg.com/quran-json@1.0.1/json/quran/text.json')
