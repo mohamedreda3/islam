@@ -5,17 +5,7 @@ close = document.querySelector('.x');
 
 close.addEventListener('click',()=>{ran.style.display == "none" ? ran.style.display = "flex" : ran.style.display = "none";})
 
-setInterval(()=>{
-num = Math.floor(Math.random()*6236);
-fetch(`https://salamquran.com/en/api/v6/aya?index=${num}`)
-.then(res=>res.json())
-.then((data)=>{
-aya_ar.innerHTML = data["result"]["text"];
-// aya_en.innerHTML = data["result"]["translate"]["text"];
-ran.style.display == "none" ? ran.style.display = "flex" : ran.style.display = "none";
-})}
-,15000);
- 
+
 
 var navigation = document.querySelector('.nav');
 var list1 = document.querySelector('.listf');
@@ -59,153 +49,6 @@ list3.classList.remove('list3');
 }
 
 
-fetch('https://api.aladhan.com/v1/hijriCalendarByCity?city=Abu%20Hammad&country=Egypt ').then(res=>res.json()).then((data)=>{console.log(data)})
-
-/****************************Mawaqeet Salat********************************/
-var hist = new Date();
-var mwaket = document.querySelector('.appointment')
-console.log(hist);
-var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var date = hist.getDate() < 10 ? `0${hist.getDate()} ${months[hist.getMonth()]} ${hist.getFullYear()}` : `${hist.getDate()} ${months[hist.getMonth()]} ${hist.getFullYear()}`;
-console.log(date.toString());
-var select = document.querySelector('.con');
-var selection = document.querySelector('.city');
-
-
-/*fetch(`https://api.pray.zone/v2/times/day.json?city=tanta&date=${hist.getFullYear()}-${(hist.getMonth()+1)}-${hist.getDate()}`).then(res=>res.json()).then((data)=>{*/
-
-fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=Tanta&country=Egypt`).then(res=>res.json()).then((data)=>{
-var t =new Number();
-for (var m = 0; m < data["data"].length; m++) {
-if(data["data"][m]["date"]["readable"] == date){
-t=m;
-}
-}
-console.log(data["data"][t]["timings"]);
-var long = Object.keys(data["data"][t]["timings"]).length;
-var awqten = Object.keys(data["data"][t]["timings"]);
-var awqtapp = Object.values(data["data"][t]["timings"]);
-var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
-var mwaqeet = new Array();
-for(z = 0 ; z< long ; z++){
-mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
-}
-mwaket.innerHTML = mwaqeet.join('');
-fetch('https://raw.githubusercontent.com/russ666/all-countries-and-cities-json/master/countries.json').then(res=>res.json()).then((res)=>{
-var array9 = new Array();
-array9.push(Object.keys(res));
-var array8 = new Array();
-array8.push(Object.values(res[array9["0"][41]]))
-var array7 = new Array();
-for (var n = 0; n < array8["0"].length; n++) {
-array7.push(`<option class="option">${array8["0"][n]}</option>`)
-}
-selection.innerHTML = array7.join("");
-selection.addEventListener('change',function(){
-for(f = 0 ; f < array9["0"].length ;f++){
-if(this.value == array8["0"][f]){
-x=f;
-}
-}
-fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=${array8["0"][x]}&country=${array9["0"][41]}`).then(res=>res.json()).then((data)=>{
-var t = new Number();
-for (var m = 0; m < data["data"].length; m++) {
-if(data["data"][m]["date"]["readable"] == date){
-t=m;
-}
-}
-var mwaqeet = new Array();
-var long = new Number();
-var awqten,awqat;
-console.log(data["data"][t]["timings"]);
-console.log()
-long = Object.keys(data["data"][t]["timings"]).length;
-awqten = Object.keys(data["data"][t]["timings"]);
-var awqtapp = Object.values(data["data"][t]["timings"]);
-var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
-var mwaqeet = new Array();
-for(z = 0 ; z< long ; z++){
-mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
-}
-mwaket.innerHTML = mwaqeet.join('');
-})
-})
-})
-})
-    /*mwaket.innerHTML = mwaqeet.join('');
-    })console.log(data["results"]["datetime"]["0"]["times"]);
-    var long = Object.keys(data["results"]["datetime"]["0"]["times"]).length;
-    var awqten = Object.keys(data["results"]["datetime"]["0"]["times"]);
-    var awqtapp = Object.values(data["results"]["datetime"]["0"]["times"]);
-    var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
-    var mwaqeet = new Array();
-    for(z = 0 ; z< long ; z++){
-    mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
-    }
-    mwaket.innerHTML = mwaqeet.join('');
-   })*/
-
-
-
-fetch('https://raw.githubusercontent.com/russ666/all-countries-and-cities-json/master/countries.json').then(res=>res.json()).then((data)=>{
-console.log(data)
-var arr = new Array();
-arr.push(Object.keys(data));
-console.log(arr);
-var array = new Array();
-for (var i = 0; i < arr["0"].length; i++) {
-array.push(`<option class="options">${arr["0"][i]}</option>`)
-}
-select.innerHTML = array.join("");
-select.value = "Egypt";
-var options = document.querySelectorAll('.options')
-console.log(options);
-var c = 0;
-select.addEventListener('change',function(){
-for(k = 0 ; k < arr["0"].length ;k++){
-if(this.value == arr["0"][k]){
-c=k;
-}
-}
-var array2 = new Array();
-var array3 = new Array();
-array2.push(Object.values(data[arr["0"][c]]))
-for (var n = 0; n < array2["0"].length; n++) {
-array3.push(`<option class="option">${array2["0"][n]}</option>`)
-}
-selection.innerHTML = array3.join("");
-var x = 0;
-selection.addEventListener('change',function(){
-for(f = 0 ; f < arr["0"].length ;f++){
-if(this.value == array2["0"][f]){
-x=f;
-}
-}
-fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=${array2["0"][x]}&country=${arr["0"][c]}`).then(res=>res.json()).then((data)=>{
-var t = new Number();
-for (var m = 0; m < data["data"].length; m++) {
-if(data["data"][m]["date"]["readable"] == date){
-t=m;
-}
-}
-var mwaqeet = new Array();
-var long = new Number();
-var awqten,awqat;
-console.log(data["data"][t]["timings"]);
-console.log()
-long = Object.keys(data["data"][t]["timings"]).length;
-awqten = Object.keys(data["data"][t]["timings"]);
-var awqtapp = Object.values(data["data"][t]["timings"]);
-var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
-var mwaqeet = new Array();
-for(z = 0 ; z< long ; z++){
-mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
-}
-mwaket.innerHTML = mwaqeet.join('');
-})
-})
-})
-})
 var h = document.querySelectorAll(".slatwaqt");
 /****************************Mawaqeet Salat********************************/
 var elsalahpoint = document.querySelector('.elsalah-point'),
@@ -356,9 +199,210 @@ picsarr.push(`<div class="pic"><img src=${r}.jpg></div>`);
 apkpics.innerHTML = picsarr.join('');
 
 setTimeout(()=>{document.querySelector('.loading').style.display = "none";},5000)
+setTimeout(()=>{document.querySelector('.shokr').style.display = "none";},20000)
+document.querySelector('.shokr').addEventListener('click',()=>{
+    document.querySelector('.shokr').style.display = "none";
+})
+
+/********** Scroll Reveal ***********/
+
+window.sr = new ScrollReveal();
+
+sr.reveal('.banner-appointment', {duration:500,origin:"top",distance:"80px"});
+sr.reveal('.banner-text', {duration:600,origin:"bottom",distance:"80px"});
+sr.reveal('.banner-img', {duration:700,origin:"top",distance:"80px"});
+sr.reveal('.banner-takweem', {duration:700,origin:"right",distance:"100px"});
+sr.reveal('.delete', {duration:800,origin:"left",distance:"1100px"});
+sr.reveal('.apk-pic', {duration:1600,origin:"bottom",distance:"80px"});
+// sr.reveal('.shehada', {duration:1600,origin:"top",distance:"80px"});
+// sr.reveal('.salat', {duration:1600,origin:"bottom",distance:"80px"});
+// sr.reveal('.zakat', {duration:1600,origin:"top",distance:"80px"});
+// sr.reveal('.seyam', {duration:1600,origin:"bottom",distance:"80px"});
+// sr.reveal('.haj', {duration:1600,origin:"top",distance:"80px"});
+// sr.reveal('.fajr', {duration:1600,origin:"top",distance:"80px"});
+// sr.reveal('.duhur', {duration:1600,origin:"bottom",distance:"80px"});
+// sr.reveal('.asr', {duration:1600,origin:"top",distance:"80px"});
+// sr.reveal('.maghrib', {duration:1600,origin:"bottom",distance:"80px"});
+// sr.reveal('.isha', {duration:1600,origin:"top",distance:"80px"});
+
+
+
+
+sr.reveal('.nav', {duration:1100});
+sr.reveal('.logo', {duration:1000});
+sr.reveal('.menu', {duration:1050});
+sr.reveal('.flex-rw', {duration:1000});
+sr.reveal('.taaref', {duration:1000});
+sr.reveal('.arkan-container', {duration:1000});
+sr.reveal('.arkan', {duration:1000});
+
+sr.reveal('.elsalat', {duration:1000});
+sr.reveal('.elsalah', {duration:1100});
+sr.reveal('.elquran', {duration:1000});
+sr.reveal('.salah', {duration:1100});
+sr.reveal('.delete-slider', {duration:1100});
+sr.reveal('.salah', {duration:1100});
 
 
 /********** Scroll Reveal ***********/
 
 
-/********** Scroll Reveal ***********/
+setInterval(()=>{
+num = Math.floor(Math.random()*6236);
+fetch(`https://salamquran.com/en/api/v6/aya?index=${num}`)
+.then(res=>res.json())
+.then((data)=>{
+aya_ar.innerHTML = data["result"]["text"];
+// aya_en.innerHTML = data["result"]["translate"]["text"];
+ran.style.display == "none" ? ran.style.display = "flex" : ran.style.display = "none";
+})}
+,15000);
+ 
+
+fetch('https://api.aladhan.com/v1/hijriCalendarByCity?city=Abu%20Hammad&country=Egypt ').then(res=>res.json()).then((data)=>{console.log(data)})
+
+/****************************Mawaqeet Salat********************************/
+var hist = new Date();
+var mwaket = document.querySelector('.appointment')
+console.log(hist);
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var date = hist.getDate() < 10 ? `0${hist.getDate()} ${months[hist.getMonth()]} ${hist.getFullYear()}` : `${hist.getDate()} ${months[hist.getMonth()]} ${hist.getFullYear()}`;
+console.log(date.toString());
+var select = document.querySelector('.con');
+var selection = document.querySelector('.city');
+
+
+/*fetch(`https://api.pray.zone/v2/times/day.json?city=tanta&date=${hist.getFullYear()}-${(hist.getMonth()+1)}-${hist.getDate()}`).then(res=>res.json()).then((data)=>{*/
+
+fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=Tanta&country=Egypt`).then(res=>res.json()).then((data)=>{
+var t =new Number();
+for (var m = 0; m < data["data"].length; m++) {
+if(data["data"][m]["date"]["readable"] == date){
+t=m;
+}
+}
+console.log(data["data"][t]["timings"]);
+var long = Object.keys(data["data"][t]["timings"]).length;
+var awqten = Object.keys(data["data"][t]["timings"]);
+var awqtapp = Object.values(data["data"][t]["timings"]);
+var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
+var mwaqeet = new Array();
+for(z = 0 ; z< long ; z++){
+mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
+}
+mwaket.innerHTML = mwaqeet.join('');
+fetch('https://raw.githubusercontent.com/russ666/all-countries-and-cities-json/master/countries.json').then(res=>res.json()).then((res)=>{
+var array9 = new Array();
+array9.push(Object.keys(res));
+var array8 = new Array();
+array8.push(Object.values(res[array9["0"][41]]))
+var array7 = new Array();
+for (var n = 0; n < array8["0"].length; n++) {
+array7.push(`<option class="option">${array8["0"][n]}</option>`)
+}
+selection.innerHTML = array7.join("");
+selection.addEventListener('change',function(){
+for(f = 0 ; f < array9["0"].length ;f++){
+if(this.value == array8["0"][f]){
+x=f;
+}
+}
+fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=${array8["0"][x]}&country=${array9["0"][41]}`).then(res=>res.json()).then((data)=>{
+var t = new Number();
+for (var m = 0; m < data["data"].length; m++) {
+if(data["data"][m]["date"]["readable"] == date){
+t=m;
+}
+}
+var mwaqeet = new Array();
+var long = new Number();
+var awqten,awqat;
+console.log(data["data"][t]["timings"]);
+console.log()
+long = Object.keys(data["data"][t]["timings"]).length;
+awqten = Object.keys(data["data"][t]["timings"]);
+var awqtapp = Object.values(data["data"][t]["timings"]);
+var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
+var mwaqeet = new Array();
+for(z = 0 ; z< long ; z++){
+mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
+}
+mwaket.innerHTML = mwaqeet.join('');
+})
+})
+})
+})
+    /*mwaket.innerHTML = mwaqeet.join('');
+    })console.log(data["results"]["datetime"]["0"]["times"]);
+    var long = Object.keys(data["results"]["datetime"]["0"]["times"]).length;
+    var awqten = Object.keys(data["results"]["datetime"]["0"]["times"]);
+    var awqtapp = Object.values(data["results"]["datetime"]["0"]["times"]);
+    var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
+    var mwaqeet = new Array();
+    for(z = 0 ; z< long ; z++){
+    mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
+    }
+    mwaket.innerHTML = mwaqeet.join('');
+   })*/
+
+
+
+fetch('https://raw.githubusercontent.com/russ666/all-countries-and-cities-json/master/countries.json').then(res=>res.json()).then((data)=>{
+console.log(data)
+var arr = new Array();
+arr.push(Object.keys(data));
+console.log(arr);
+var array = new Array();
+for (var i = 0; i < arr["0"].length; i++) {
+array.push(`<option class="options">${arr["0"][i]}</option>`)
+}
+select.innerHTML = array.join("");
+select.value = "Egypt";
+var options = document.querySelectorAll('.options')
+console.log(options);
+var c = 0;
+select.addEventListener('change',function(){
+for(k = 0 ; k < arr["0"].length ;k++){
+if(this.value == arr["0"][k]){
+c=k;
+}
+}
+var array2 = new Array();
+var array3 = new Array();
+array2.push(Object.values(data[arr["0"][c]]))
+for (var n = 0; n < array2["0"].length; n++) {
+array3.push(`<option class="option">${array2["0"][n]}</option>`)
+}
+selection.innerHTML = array3.join("");
+var x = 0;
+selection.addEventListener('change',function(){
+for(f = 0 ; f < arr["0"].length ;f++){
+if(this.value == array2["0"][f]){
+x=f;
+}
+}
+fetch(`https://api.aladhan.com/v1/hijriCalendarByCity?city=${array2["0"][x]}&country=${arr["0"][c]}`).then(res=>res.json()).then((data)=>{
+var t = new Number();
+for (var m = 0; m < data["data"].length; m++) {
+if(data["data"][m]["date"]["readable"] == date){
+t=m;
+}
+}
+var mwaqeet = new Array();
+var long = new Number();
+var awqten,awqat;
+console.log(data["data"][t]["timings"]);
+console.log()
+long = Object.keys(data["data"][t]["timings"]).length;
+awqten = Object.keys(data["data"][t]["timings"]);
+var awqtapp = Object.values(data["data"][t]["timings"]);
+var awqat = ["الفجر","الشروق","الظهر","العصر","الغروب","المغرب","العشاء","الإمساك","منتصف الليل"]
+var mwaqeet = new Array();
+for(z = 0 ; z< long ; z++){
+mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
+}
+mwaket.innerHTML = mwaqeet.join('');
+})
+})
+})
+})

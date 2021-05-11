@@ -244,3 +244,19 @@ var tole = document.querySelector('.tog');
 function togle(){
 tole.classList.toggle('active');
 };
+
+window.sr = new ScrollReveal();
+
+sr.reveal('.showzekr', {
+duration:500,
+orgin:"bottom",
+distance:"80px"
+});
+
+sr.reveal('.navv', {duration:1000});
+sr.reveal('.logo', {duration:1570});
+sr.reveal('.list', {duration:1600});
+sr.reveal('.search', {duration:1670});
+sr.reveal('.title', {duration:1700});
+
+sr.reveal('.flex-rw', {duration:1000});

@@ -348,20 +348,20 @@ window.sr = ScrollReveal();
 
 sr.reveal('.aya', {
 duration:500,
-orgin:"bottom",
+origin:"bottom",
 distance:"80px"
 });
 
-sr.reveal('.nav', {duration:500});
-sr.reveal('.logo', {duration:570});
-sr.reveal('.list', {duration:600});
-sr.reveal('.search', {duration:670});
-sr.reveal('.title', {duration:700});
-sr.reveal('.arrange', {duration:750});
-sr.reveal('.farz', {duration:820});
-sr.reveal('.all', {duration:870});
-sr.reveal('.mak', {duration:900});
-sr.reveal('.mad', {duration:930});
+sr.reveal('.nav', {duration:1000});
+sr.reveal('.logo', {duration:1570});
+sr.reveal('.list', {duration:1600});
+sr.reveal('.search', {duration:1670});
+sr.reveal('.title', {duration:1700});
+sr.reveal('.arrange', {duration:1750});
+sr.reveal('.farz', {duration:1820});
+sr.reveal('.all', {duration:1870});
+sr.reveal('.mak', {duration:1900});
+sr.reveal('.mad', {duration:1930});
 sr.reveal('.flex-rw', {duration:1000});
 
 
@@ -387,3 +387,13 @@ xhr.open("GET","names_of_allah.json",true);
 xhr.send();*/
 //fetch('names_of_allah.json').then(res=>res.json()).then(data => console.log(data));
 // لازم تشتغل على لايف سيرفر
+
+
+var navigation = document.querySelector('.navv');
+window.addEventListener('scroll',function(){
+if(window.pageYOffset > 1){
+navigation.classList.add('navigation');
+}else{
+navigation.classList.remove('navigation');
+}
+});
