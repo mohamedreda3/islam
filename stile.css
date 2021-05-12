@@ -28,7 +28,13 @@ text-align: right;
 }
 
 .ran-ar, .ran-en {
+    left:0vh;
+    bottom:0vh;
     width: 100%;
+}
+
+.ran{
+right:0vh;
 }
 
 em#remove-rawy{
