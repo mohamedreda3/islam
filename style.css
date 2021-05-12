@@ -235,7 +235,7 @@ box-shadow: 0vh 6vh 5.2vh -5.2vh black;
 background: rgba(0,0,0,0.75);
 width: 100%;
 color: white;
-z-index: 99999999999999999999999999999999999999999999999999;
+z-index: -1;
 }
 
 
