@@ -23,6 +23,8 @@ transition: 1s all;
     font-size: 3vh;
 }
 
+
+
 body,html{
 position: relative;
 width: 100%;
@@ -381,6 +383,12 @@ color: black;
 transition-delay: 0.2s all;
 
 }
+
+.aya._back a, .aya._back p{
+font-weight: bold;
+color: white;
+transition-delay: 0.2s all;
+}
     
 .aya:hover a,.aya:hover p{
 font-weight: bold;
@@ -612,6 +620,10 @@ width: 100%;
     border-radius: 1.5vh;
     z-index: -1;
     transition: 1s all;
+}
+
+.aya._back::before{
+    width: 100%;
 }
 
 .aya:hover::before{

@@ -402,7 +402,10 @@ for(z = 0 ; z< long ; z++){
 mwaqeet.push(`<span class="slatwaqt"><span class="waqten">${awqten[z]}</span><span class="waqtapp">${awqtapp[z]}</span><span class="waqtar">${awqat[z]}</span></span>`)
 }
 mwaket.innerHTML = mwaqeet.join('');
-})
-})
-})
-})
+});
+});
+});
+});
+
+
+

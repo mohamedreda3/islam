@@ -397,3 +397,13 @@ navigation.classList.add('navigation');
 navigation.classList.remove('navigation');
 }
 });
+
+
+// var suradate = document.querySelectorAll('.aya')
+// console.log(suradate.length)
+// for(let _i = 0 ; _i < suradate.length ; _i++){
+//     suradate[_i].addEventListener('click',function(){
+//         suradate[_i].classList.remove('_back');
+//         this.classList.add('_back');
+//     })
+// }
